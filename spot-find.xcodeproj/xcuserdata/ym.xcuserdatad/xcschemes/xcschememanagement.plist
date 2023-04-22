@@ -4,10 +4,59 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>spot-find.xcscheme_^#shared#^_</key>
+		<key>Promises (Playground) 1.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Promises (Playground) 2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Promises (Playground).xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>spot-find-dev.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>spot-find-prd.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>spot-find-stg.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>990AF41029F3BA8800EB6859</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>990AF42029F3BA8900EB6859</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>990AF42A29F3BA8900EB6859</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

@@ -14,6 +14,10 @@
 		990AF42629F3BA8900EB6859 /* spot_findTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF42529F3BA8900EB6859 /* spot_findTests.swift */; };
 		990AF43029F3BA8900EB6859 /* spot_findUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF42F29F3BA8900EB6859 /* spot_findUITests.swift */; };
 		990AF43229F3BA8900EB6859 /* spot_findUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF43129F3BA8900EB6859 /* spot_findUITestsLaunchTests.swift */; };
+		990AF44029F3BD6800EB6859 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 990AF43F29F3BD6800EB6859 /* FirebaseAuth */; };
+		990AF44829F3BF3400EB6859 /* GoogleService-Info-Prd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 990AF44529F3BF3400EB6859 /* GoogleService-Info-Prd.plist */; };
+		990AF44929F3BF3400EB6859 /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 990AF44629F3BF3400EB6859 /* GoogleService-Info-Stg.plist */; };
+		990AF44A29F3BF3400EB6859 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = 990AF44729F3BF3400EB6859 /* GoogleService-Info-Dev.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,9 @@
 		990AF42B29F3BA8900EB6859 /* spot-findUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spot-findUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		990AF42F29F3BA8900EB6859 /* spot_findUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spot_findUITests.swift; sourceTree = "<group>"; };
 		990AF43129F3BA8900EB6859 /* spot_findUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spot_findUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		990AF44529F3BF3400EB6859 /* GoogleService-Info-Prd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Prd.plist"; sourceTree = "<group>"; };
+		990AF44629F3BF3400EB6859 /* GoogleService-Info-Stg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Stg.plist"; sourceTree = "<group>"; };
+		990AF44729F3BF3400EB6859 /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990AF44029F3BD6800EB6859 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +102,10 @@
 		990AF41329F3BA8800EB6859 /* spot-find */ = {
 			isa = PBXGroup;
 			children = (
-				990AF41429F3BA8800EB6859 /* spot_findApp.swift */,
-				990AF41629F3BA8800EB6859 /* ContentView.swift */,
-				990AF41829F3BA8900EB6859 /* Assets.xcassets */,
+				990AF44429F3BF1200EB6859 /* Config */,
+				990AF44129F3BD9F00EB6859 /* Application */,
+				990AF44329F3BDC700EB6859 /* View */,
+				990AF44229F3BDB300EB6859 /* Resource */,
 				990AF41A29F3BA8900EB6859 /* Preview Content */,
 			);
 			path = "spot-find";
@@ -127,6 +136,40 @@
 			path = "spot-findUITests";
 			sourceTree = "<group>";
 		};
+		990AF44129F3BD9F00EB6859 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				990AF41429F3BA8800EB6859 /* spot_findApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		990AF44229F3BDB300EB6859 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				990AF41829F3BA8900EB6859 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		990AF44329F3BDC700EB6859 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				990AF41629F3BA8800EB6859 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		990AF44429F3BF1200EB6859 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				990AF44529F3BF3400EB6859 /* GoogleService-Info-Prd.plist */,
+				990AF44629F3BF3400EB6859 /* GoogleService-Info-Stg.plist */,
+				990AF44729F3BF3400EB6859 /* GoogleService-Info-Dev.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,12 +180,16 @@
 				990AF40D29F3BA8800EB6859 /* Sources */,
 				990AF40E29F3BA8800EB6859 /* Frameworks */,
 				990AF40F29F3BA8800EB6859 /* Resources */,
+				990AF44B29F3C04E00EB6859 /* Run Script */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "spot-find";
+			packageProductDependencies = (
+				990AF43F29F3BD6800EB6859 /* FirebaseAuth */,
+			);
 			productName = "spot-find";
 			productReference = 990AF41129F3BA8800EB6859 /* spot-find.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +262,9 @@
 				Base,
 			);
 			mainGroup = 990AF40829F3BA8800EB6859;
+			packageReferences = (
+				990AF43E29F3BD6800EB6859 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 990AF41229F3BA8800EB6859 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,6 +281,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990AF44A29F3BF3400EB6859 /* GoogleService-Info-Dev.plist in Resources */,
+				990AF44929F3BF3400EB6859 /* GoogleService-Info-Stg.plist in Resources */,
+				990AF44829F3BF3400EB6859 /* GoogleService-Info-Prd.plist in Resources */,
 				990AF41C29F3BA8900EB6859 /* Preview Assets.xcassets in Resources */,
 				990AF41929F3BA8900EB6859 /* Assets.xcassets in Resources */,
 			);
@@ -251,6 +304,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		990AF44B29F3C04E00EB6859 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" == \"Release\" ]; then\n  cp \"${PROJECT_DIR}/${PROJECT_NAME}/Config/GoogleService-Info-Prd.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\nelif [ \"${CONFIGURATION}\" == \"Staging\" ]; then\n    cp \"${PROJECT_DIR}/${PROJECT_NAME}/Config/GoogleService-Info-Stg.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\nelse\n  cp \"${PROJECT_DIR}/${PROJECT_NAME}/Config/GoogleService-Info-Dev.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		990AF40D29F3BA8800EB6859 /* Sources */ = {
@@ -299,6 +373,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APP_NAME = SpotFind;
+				BUNDLE_DISPLAY_NAME = "[DEV]";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -359,6 +435,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APP_NAME = SpotFind;
+				BUNDLE_DISPLAY_NAME = SpotFind;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -420,6 +498,7 @@
 				DEVELOPMENT_TEAM = N97Y4ACV2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(BUNDLE_DISPLAY_NAME)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +528,7 @@
 				DEVELOPMENT_TEAM = N97Y4ACV2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(BUNDLE_DISPLAY_NAME)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -543,6 +623,136 @@
 			};
 			name = Release;
 		};
+		990AF44C29F3C0AA00EB6859 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APP_NAME = SpotFind;
+				BUNDLE_DISPLAY_NAME = "[STG]";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Staging;
+		};
+		990AF44D29F3C0AA00EB6859 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"spot-find/Preview Content\"";
+				DEVELOPMENT_TEAM = N97Y4ACV2U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(BUNDLE_DISPLAY_NAME)";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.spot-find.spot-find";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Staging;
+		};
+		990AF44E29F3C0AA00EB6859 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N97Y4ACV2U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.spot-find.spot-findTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spot-find.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/spot-find";
+			};
+			name = Staging;
+		};
+		990AF44F29F3C0AA00EB6859 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N97Y4ACV2U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.spot-find.spot-findUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "spot-find";
+			};
+			name = Staging;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -550,6 +760,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				990AF43329F3BA8900EB6859 /* Debug */,
+				990AF44C29F3C0AA00EB6859 /* Staging */,
 				990AF43429F3BA8900EB6859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -559,6 +770,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				990AF43629F3BA8900EB6859 /* Debug */,
+				990AF44D29F3C0AA00EB6859 /* Staging */,
 				990AF43729F3BA8900EB6859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -568,6 +780,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				990AF43929F3BA8900EB6859 /* Debug */,
+				990AF44E29F3C0AA00EB6859 /* Staging */,
 				990AF43A29F3BA8900EB6859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -577,12 +790,32 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				990AF43C29F3BA8900EB6859 /* Debug */,
+				990AF44F29F3C0AA00EB6859 /* Staging */,
 				990AF43D29F3BA8900EB6859 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		990AF43E29F3BD6800EB6859 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		990AF43F29F3BD6800EB6859 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 990AF43E29F3BD6800EB6859 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 990AF40929F3BA8800EB6859 /* Project object */;
 }
