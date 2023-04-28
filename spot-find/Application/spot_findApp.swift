@@ -5,6 +5,7 @@
 //  Created by Yuya Morimoto on R 5/04/22.
 //
 
+import ComposableArchitecture
 import FirebaseCore
 import SwiftUI
 
@@ -22,10 +23,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct spot_findApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
