@@ -12,20 +12,20 @@ enum AuthAction: Equatable {
     // MARK: - create user
 
     case createUser(email: String, password: String)
-    case onCreateUserResponse(TaskResult<CreateUserResult>)
+    case onCreateUserResponse(TaskResult<AuthDataResult>)
 
     // MARK: - send email verification
 
-    case sendEmailVerification(user: User)
-    case onSendEmailVerificationResponse(TaskResult<SendEmailVerificationResult>)
+    case sendEmailVerification
+    case onSendEmailVerificationResponse(TaskResult<Bool>)
     
     // MARK: - sign in
 
     case signIn(email: String, password: String)
-    case onSignInResponse(TaskResult<SignInResult>)
+    case onSignInResponse(TaskResult<AuthDataResult>)
 
     // MARK: - sign out
 
     case signOut
-    case onSignOutResponse(TaskResult<SignOutResult>)
+    case onSignOutResponse(TaskResult<Bool>)
 }

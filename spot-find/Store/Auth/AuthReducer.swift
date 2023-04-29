@@ -9,6 +9,11 @@ import ComposableArchitecture
 import FirebaseAuth
 
 struct AuthReducer: ReducerProtocol {
+    @Dependency(\.authClient.createUser) var createUser
+    @Dependency(\.authClient.sendEmailVerification) var sendEmailVerification
+    @Dependency(\.authClient.signIn) var signIn
+    @Dependency(\.authClient.signOut) var signOut
+
     func reduce(into state: inout AuthState, action: AuthAction) -> EffectTask<AuthAction> {
         switch action {
             // MARK: - create user
@@ -18,13 +23,13 @@ struct AuthReducer: ReducerProtocol {
             return .task {
                 .onCreateUserResponse(
                     await TaskResult {
-                        try await self.createUser(email: email, password: password)
+                        try await createUser(email, password)
                     }
                 )
             }
         case let .onCreateUserResponse(.success(result)):
             state.createaUserApiStatus.stepSuccess(result: result)
-            return .task(operation: { .sendEmailVerification(user: result.user) })
+            return .task(operation: { .sendEmailVerification })
         case let .onCreateUserResponse(.failure(error)):
             let error = error as NSError
             state.createaUserApiStatus.stepFailed(error: ErrorState.codeToErrorState(code: error.code))
@@ -32,12 +37,12 @@ struct AuthReducer: ReducerProtocol {
 
             // MARK: - send email verification
 
-        case let .sendEmailVerification(user):
+        case .sendEmailVerification:
             state.sendEmailVerificationApiStatus.stepPending()
             return .task {
                 .onSendEmailVerificationResponse(
                     await TaskResult {
-                        try await self.sendEmailVerification(user: user)
+                        try await sendEmailVerification()
                     })
             }
         case let .onSendEmailVerificationResponse(.success(result)):
@@ -55,7 +60,7 @@ struct AuthReducer: ReducerProtocol {
             return .task {
                 .onSignInResponse(
                     await TaskResult {
-                        try await self.signIn(email: email, password: password)
+                        try await signIn(email, password)
                     })
             }
         case let .onSignInResponse(.success(result)):
@@ -73,7 +78,7 @@ struct AuthReducer: ReducerProtocol {
             return .task {
                 .onSignOutResponse(
                     await TaskResult {
-                        try await self.signOut()
+                        try await signOut()
                     })
             }
         case let .onSignOutResponse(.success(result)):
@@ -83,46 +88,6 @@ struct AuthReducer: ReducerProtocol {
             let error = error as NSError
             state.signOutApiStatus.stepFailed(error: ErrorState.codeToErrorState(code: error.code))
             return .none
-        }
-    }
-}
-
-extension AuthReducer {
-    @MainActor
-    func createUser(email: String, password: String) async throws -> AuthDataResult {
-        do {
-            return try await AuthState.auth.createUser(withEmail: email, password: password)
-        } catch {
-            throw error
-        }
-    }
-
-    @MainActor
-    func sendEmailVerification(user: User) async throws -> Bool {
-        do {
-            try await user.sendEmailVerification()
-            return true
-        } catch {
-            throw error
-        }
-    }
-
-    @MainActor
-    func signIn(email: String, password: String) async throws -> AuthDataResult {
-        do {
-            return try await AuthState.auth.signIn(withEmail: email, password: password)
-        } catch {
-            throw error
-        }
-    }
-
-    @MainActor
-    func signOut() async throws -> Bool {
-        do {
-            try AuthState.auth.signOut()
-            return true
-        } catch {
-            throw error
         }
     }
 }

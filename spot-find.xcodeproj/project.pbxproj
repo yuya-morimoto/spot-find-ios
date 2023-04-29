@@ -33,6 +33,8 @@
 		9947CB6629F4F6A100657867 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6529F4F6A100657867 /* SignUpPage.swift */; };
 		9947CB6C29F52F9F00657867 /* ApiStatusAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6B29F52F9F00657867 /* ApiStatusAction.swift */; };
 		9947CB6E29F5366300657867 /* AuthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6D29F5366300657867 /* AuthType.swift */; };
+		99B99E6E29FD0612007CDB0C /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E6D29FD0612007CDB0C /* AuthClient.swift */; };
+		99B99E7029FD0730007CDB0C /* AuthEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E6F29FD0730007CDB0C /* AuthEnvironment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		9947CB6529F4F6A100657867 /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
 		9947CB6B29F52F9F00657867 /* ApiStatusAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiStatusAction.swift; sourceTree = "<group>"; };
 		9947CB6D29F5366300657867 /* AuthType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthType.swift; sourceTree = "<group>"; };
+		99B99E6D29FD0612007CDB0C /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
+		99B99E6F29FD0730007CDB0C /* AuthEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEnvironment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				9945071529F43537003FC0E5 /* Common */,
+				99B99E7329FD0F4B007CDB0C /* Dependency */,
 				990AF46F29F3EFF700EB6859 /* Auth */,
 			);
 			path = Store;
@@ -236,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				9947CB6D29F5366300657867 /* AuthType.swift */,
+				99B99E6F29FD0730007CDB0C /* AuthEnvironment.swift */,
 				990AF46B29F3EE3700EB6859 /* AuthState.swift */,
 				990AF46D29F3EF8700EB6859 /* AuthAction.swift */,
 				990AF47029F3F06600EB6859 /* AuthReducer.swift */,
@@ -260,6 +266,14 @@
 				9947CB6B29F52F9F00657867 /* ApiStatusAction.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		99B99E7329FD0F4B007CDB0C /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				99B99E6D29FD0612007CDB0C /* AuthClient.swift */,
+			);
+			path = Dependency;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +445,7 @@
 				990AF45B29F3CF4800EB6859 /* SignTopView.swift in Sources */,
 				9945071229F434A8003FC0E5 /* ImageExtension.swift in Sources */,
 				9947CB6E29F5366300657867 /* AuthType.swift in Sources */,
+				99B99E6E29FD0612007CDB0C /* AuthClient.swift in Sources */,
 				9945071429F43507003FC0E5 /* ErrorText.swift in Sources */,
 				9945071029F43440003FC0E5 /* ColorExtension.swift in Sources */,
 				990AF47129F3F06600EB6859 /* AuthReducer.swift in Sources */,
@@ -442,6 +457,7 @@
 				990AF46C29F3EE3700EB6859 /* AuthState.swift in Sources */,
 				990AF47729F3F71E00EB6859 /* AppTopPage.swift in Sources */,
 				990AF47529F3F65700EB6859 /* RootView.swift in Sources */,
+				99B99E7029FD0730007CDB0C /* AuthEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
