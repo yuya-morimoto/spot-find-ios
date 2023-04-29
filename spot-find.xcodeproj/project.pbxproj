@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		990AF41529F3BA8800EB6859 /* spot_findApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF41429F3BA8800EB6859 /* spot_findApp.swift */; };
-		990AF41729F3BA8800EB6859 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF41629F3BA8800EB6859 /* ContentView.swift */; };
 		990AF41929F3BA8900EB6859 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 990AF41829F3BA8900EB6859 /* Assets.xcassets */; };
 		990AF41C29F3BA8900EB6859 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 990AF41B29F3BA8900EB6859 /* Preview Assets.xcassets */; };
 		990AF42629F3BA8900EB6859 /* spot_findTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF42529F3BA8900EB6859 /* spot_findTests.swift */; };
@@ -18,6 +17,22 @@
 		990AF44829F3BF3400EB6859 /* GoogleService-Info-Prd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 990AF44529F3BF3400EB6859 /* GoogleService-Info-Prd.plist */; };
 		990AF44929F3BF3400EB6859 /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 990AF44629F3BF3400EB6859 /* GoogleService-Info-Stg.plist */; };
 		990AF44A29F3BF3400EB6859 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = 990AF44729F3BF3400EB6859 /* GoogleService-Info-Dev.plist */; };
+		990AF45229F3C75D00EB6859 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 990AF45129F3C75D00EB6859 /* ComposableArchitecture */; };
+		990AF45B29F3CF4800EB6859 /* SignTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF45A29F3CF4800EB6859 /* SignTopView.swift */; };
+		990AF46C29F3EE3700EB6859 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF46B29F3EE3700EB6859 /* AuthState.swift */; };
+		990AF46E29F3EF8700EB6859 /* AuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF46D29F3EF8700EB6859 /* AuthAction.swift */; };
+		990AF47129F3F06600EB6859 /* AuthReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF47029F3F06600EB6859 /* AuthReducer.swift */; };
+		990AF47529F3F65700EB6859 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF47429F3F65700EB6859 /* RootView.swift */; };
+		990AF47729F3F71E00EB6859 /* AppTopPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF47629F3F71E00EB6859 /* AppTopPage.swift */; };
+		9945070B29F433FD003FC0E5 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945070A29F433FD003FC0E5 /* SignInPage.swift */; };
+		9945071029F43440003FC0E5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945070F29F43440003FC0E5 /* ColorExtension.swift */; };
+		9945071229F434A8003FC0E5 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945071129F434A8003FC0E5 /* ImageExtension.swift */; };
+		9945071429F43507003FC0E5 /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945071329F43507003FC0E5 /* ErrorText.swift */; };
+		9945071729F43541003FC0E5 /* ErrorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945071629F43541003FC0E5 /* ErrorState.swift */; };
+		9945071B29F43AB0003FC0E5 /* ApiStatusState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945071A29F43AB0003FC0E5 /* ApiStatusState.swift */; };
+		9947CB6629F4F6A100657867 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6529F4F6A100657867 /* SignUpPage.swift */; };
+		9947CB6C29F52F9F00657867 /* ApiStatusAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6B29F52F9F00657867 /* ApiStatusAction.swift */; };
+		9947CB6E29F5366300657867 /* AuthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6D29F5366300657867 /* AuthType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +55,6 @@
 /* Begin PBXFileReference section */
 		990AF41129F3BA8800EB6859 /* spot-find.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "spot-find.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		990AF41429F3BA8800EB6859 /* spot_findApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spot_findApp.swift; sourceTree = "<group>"; };
-		990AF41629F3BA8800EB6859 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		990AF41829F3BA8900EB6859 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		990AF41B29F3BA8900EB6859 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		990AF42129F3BA8900EB6859 /* spot-findTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spot-findTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +65,21 @@
 		990AF44529F3BF3400EB6859 /* GoogleService-Info-Prd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Prd.plist"; sourceTree = "<group>"; };
 		990AF44629F3BF3400EB6859 /* GoogleService-Info-Stg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Stg.plist"; sourceTree = "<group>"; };
 		990AF44729F3BF3400EB6859 /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
+		990AF45A29F3CF4800EB6859 /* SignTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTopView.swift; sourceTree = "<group>"; };
+		990AF46B29F3EE3700EB6859 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		990AF46D29F3EF8700EB6859 /* AuthAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAction.swift; sourceTree = "<group>"; };
+		990AF47029F3F06600EB6859 /* AuthReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthReducer.swift; sourceTree = "<group>"; };
+		990AF47429F3F65700EB6859 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		990AF47629F3F71E00EB6859 /* AppTopPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTopPage.swift; sourceTree = "<group>"; };
+		9945070A29F433FD003FC0E5 /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
+		9945070F29F43440003FC0E5 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		9945071129F434A8003FC0E5 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		9945071329F43507003FC0E5 /* ErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
+		9945071629F43541003FC0E5 /* ErrorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorState.swift; sourceTree = "<group>"; };
+		9945071A29F43AB0003FC0E5 /* ApiStatusState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiStatusState.swift; sourceTree = "<group>"; };
+		9947CB6529F4F6A100657867 /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
+		9947CB6B29F52F9F00657867 /* ApiStatusAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiStatusAction.swift; sourceTree = "<group>"; };
+		9947CB6D29F5366300657867 /* AuthType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990AF45229F3C75D00EB6859 /* ComposableArchitecture in Frameworks */,
 				990AF44029F3BD6800EB6859 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,8 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				990AF44429F3BF1200EB6859 /* Config */,
+				9945070E29F43424003FC0E5 /* Extensioin */,
+				990AF45329F3C91E00EB6859 /* Store */,
 				990AF44129F3BD9F00EB6859 /* Application */,
-				990AF44329F3BDC700EB6859 /* View */,
+				990AF45C29F3D71B00EB6859 /* View */,
 				990AF44229F3BDB300EB6859 /* Resource */,
 				990AF41A29F3BA8900EB6859 /* Preview Content */,
 			);
@@ -152,12 +184,15 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		990AF44329F3BDC700EB6859 /* View */ = {
+		990AF44329F3BDC700EB6859 /* Page */ = {
 			isa = PBXGroup;
 			children = (
-				990AF41629F3BA8800EB6859 /* ContentView.swift */,
+				990AF45A29F3CF4800EB6859 /* SignTopView.swift */,
+				9945070A29F433FD003FC0E5 /* SignInPage.swift */,
+				9947CB6529F4F6A100657867 /* SignUpPage.swift */,
+				990AF47629F3F71E00EB6859 /* AppTopPage.swift */,
 			);
-			path = View;
+			path = Page;
 			sourceTree = "<group>";
 		};
 		990AF44429F3BF1200EB6859 /* Config */ = {
@@ -168,6 +203,63 @@
 				990AF44729F3BF3400EB6859 /* GoogleService-Info-Dev.plist */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		990AF45329F3C91E00EB6859 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				9945071529F43537003FC0E5 /* Common */,
+				990AF46F29F3EFF700EB6859 /* Auth */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		990AF45C29F3D71B00EB6859 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				990AF47429F3F65700EB6859 /* RootView.swift */,
+				990AF45E29F3D79300EB6859 /* Component */,
+				990AF44329F3BDC700EB6859 /* Page */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		990AF45E29F3D79300EB6859 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				9945071329F43507003FC0E5 /* ErrorText.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		990AF46F29F3EFF700EB6859 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				9947CB6D29F5366300657867 /* AuthType.swift */,
+				990AF46B29F3EE3700EB6859 /* AuthState.swift */,
+				990AF46D29F3EF8700EB6859 /* AuthAction.swift */,
+				990AF47029F3F06600EB6859 /* AuthReducer.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		9945070E29F43424003FC0E5 /* Extensioin */ = {
+			isa = PBXGroup;
+			children = (
+				9945070F29F43440003FC0E5 /* ColorExtension.swift */,
+				9945071129F434A8003FC0E5 /* ImageExtension.swift */,
+			);
+			path = Extensioin;
+			sourceTree = "<group>";
+		};
+		9945071529F43537003FC0E5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9945071629F43541003FC0E5 /* ErrorState.swift */,
+				9945071A29F43AB0003FC0E5 /* ApiStatusState.swift */,
+				9947CB6B29F52F9F00657867 /* ApiStatusAction.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +281,7 @@
 			name = "spot-find";
 			packageProductDependencies = (
 				990AF43F29F3BD6800EB6859 /* FirebaseAuth */,
+				990AF45129F3C75D00EB6859 /* ComposableArchitecture */,
 			);
 			productName = "spot-find";
 			productReference = 990AF41129F3BA8800EB6859 /* spot-find.app */;
@@ -264,6 +357,7 @@
 			mainGroup = 990AF40829F3BA8800EB6859;
 			packageReferences = (
 				990AF43E29F3BD6800EB6859 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				990AF45029F3C75D00EB6859 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 990AF41229F3BA8800EB6859 /* Products */;
 			projectDirPath = "";
@@ -308,6 +402,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		990AF44B29F3C04E00EB6859 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -331,8 +426,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				990AF41729F3BA8800EB6859 /* ContentView.swift in Sources */,
+				9945071B29F43AB0003FC0E5 /* ApiStatusState.swift in Sources */,
+				9945071729F43541003FC0E5 /* ErrorState.swift in Sources */,
+				990AF45B29F3CF4800EB6859 /* SignTopView.swift in Sources */,
+				9945071229F434A8003FC0E5 /* ImageExtension.swift in Sources */,
+				9947CB6E29F5366300657867 /* AuthType.swift in Sources */,
+				9945071429F43507003FC0E5 /* ErrorText.swift in Sources */,
+				9945071029F43440003FC0E5 /* ColorExtension.swift in Sources */,
+				990AF47129F3F06600EB6859 /* AuthReducer.swift in Sources */,
+				990AF46E29F3EF8700EB6859 /* AuthAction.swift in Sources */,
+				9945070B29F433FD003FC0E5 /* SignInPage.swift in Sources */,
 				990AF41529F3BA8800EB6859 /* spot_findApp.swift in Sources */,
+				9947CB6629F4F6A100657867 /* SignUpPage.swift in Sources */,
+				9947CB6C29F52F9F00657867 /* ApiStatusAction.swift in Sources */,
+				990AF46C29F3EE3700EB6859 /* AuthState.swift in Sources */,
+				990AF47729F3F71E00EB6859 /* AppTopPage.swift in Sources */,
+				990AF47529F3F65700EB6859 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -807,6 +916,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		990AF45029F3C75D00EB6859 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -814,6 +931,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 990AF43E29F3BD6800EB6859 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		990AF45129F3C75D00EB6859 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 990AF45029F3C75D00EB6859 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
