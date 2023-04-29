@@ -14,44 +14,42 @@ struct SignTopView: View {
 
     let store: StoreOf<AuthReducer>
 
-    init(store: StoreOf<AuthReducer>) {
-        self.store = store
-    }
-
     var body: some View {
-        ZStack {
-            VStack {
-                Spacer()
+        WithViewStore(self.store, observe: { $0 }) { viewStore in
+            ZStack {
                 VStack {
-                    Text("Welcome to SpotFind.")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                }
-                Spacer()
-                VStack {
-                    Button(action: {
-                        signInSheet.toggle()
-                    }, label: {
-                        Text("ログイン")
-                            .frame(maxWidth: .infinity)
-                    })
-                    .padding(.horizontal, 30)
-                    .sheet(isPresented: $signInSheet, onDismiss: {}) {
-                        Text("sign in user")
+                    Spacer()
+                    VStack {
+                        Text("Welcome to SpotFind.")
+                            .font(.title)
+                            .fontWeight(.semibold)
                     }
-                    Button(action: {
-                        signUpSheet.toggle()
-                    }, label: {
-                        Text("アカウントを作成する")
-                            .frame(maxWidth: .infinity)
-                    })
-                    .padding(.horizontal, 30)
-                    .sheet(isPresented: $signUpSheet, onDismiss: {}) {
-                        SignUpPage(store: self.store)
+                    Spacer()
+                    VStack {
+                        Button(action: {
+                            signInSheet.toggle()
+                        }, label: {
+                            Text("ログイン")
+                                .frame(maxWidth: .infinity)
+                        })
+                        .padding(.horizontal, 30)
+                        .sheet(isPresented: $signInSheet, onDismiss: {}) {
+                            SignInPage(viewStore: viewStore)
+                        }
+                        Button(action: {
+                            signUpSheet.toggle()
+                        }, label: {
+                            Text("アカウントを作成する")
+                                .frame(maxWidth: .infinity)
+                        })
+                        .padding(.horizontal, 30)
+                        .sheet(isPresented: $signUpSheet, onDismiss: {}) {
+                            SignUpPage(viewStore: viewStore)
+                        }
                     }
                 }
+                .padding()
             }
-            .padding()
         }
     }
 }

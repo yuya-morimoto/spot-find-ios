@@ -17,8 +17,8 @@ struct RootView: View {
 
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
-            if viewStore.currentUser != nil {
-                AppTopPage(viewStore: viewStore)
+            if AuthState.auth.currentUser != nil {
+                AppTopPage(store: self.store)
             } else {
                 SignTopView(store: self.store)
             }

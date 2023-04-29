@@ -11,97 +11,118 @@ import FirebaseAuth
 struct AuthReducer: ReducerProtocol {
     func reduce(into state: inout AuthState, action: AuthAction) -> EffectTask<AuthAction> {
         switch action {
-        case .updateCurrentUser:
-            state.currentUser = AuthState.auth.currentUser
-            return .none
+            // MARK: - create user
 
-        case let .createUserStart(email, password):
+        case let .createUser(email, password):
             state.createaUserApiStatus.stepPending()
-            return .task(operation: { .createUserExecute(email: email, password: password) })
-
-        case let .createUserExecute(email, password):
-            return .run { send in
-                self.createUser(email: email, password: password) { result in
-                    switch result {
-                    case .success:
-                        Task { @MainActor in send(.signOutStatus(step: .success(nil))) }
-                    case .failure:
-                        Task { @MainActor in send(.signOutStatus(step: .success(nil))) }
+            return .task {
+                .onCreateUserResponse(
+                    await TaskResult {
+                        try await self.createUser(email: email, password: password)
                     }
-                }
+                )
             }
-
-        case let .createUserEnd(result):
-            switch result {
-            case .success:
-                state.createaUserApiStatus.stepSuccess(result: nil)
-            case let .failure(error):
-                state.createaUserApiStatus.stepFailed(error: error)
-            }
+        case let .onCreateUserResponse(.success(result)):
+            state.createaUserApiStatus.stepSuccess(result: result)
+            return .task(operation: { .sendEmailVerification(user: result.user) })
+        case let .onCreateUserResponse(.failure(error)):
+            let error = error as NSError
+            state.createaUserApiStatus.stepFailed(error: ErrorState.codeToErrorState(code: error.code))
             return .none
+
+            // MARK: - send email verification
+
+        case let .sendEmailVerification(user):
+            state.sendEmailVerificationApiStatus.stepPending()
+            return .task {
+                .onSendEmailVerificationResponse(
+                    await TaskResult {
+                        try await self.sendEmailVerification(user: user)
+                    })
+            }
+        case let .onSendEmailVerificationResponse(.success(result)):
+            state.sendEmailVerificationApiStatus.stepSuccess(result: result)
+            return .task(operation: { .signOut })
+        case let .onSendEmailVerificationResponse(.failure(error)):
+            let error = error as NSError
+            state.sendEmailVerificationApiStatus.stepFailed(error: ErrorState.codeToErrorState(code: error.code))
+            return .none
+
+            // MARK: - sign in
+
+        case let .signIn(email, password):
+            state.signOutApiStatus.stepPending()
+            return .task {
+                .onSignInResponse(
+                    await TaskResult {
+                        try await self.signIn(email: email, password: password)
+                    })
+            }
+        case let .onSignInResponse(.success(result)):
+            state.signInApiStatus.stepSuccess(result: result)
+            return .none
+        case let .onSignInResponse(.failure(error)):
+            let error = error as NSError
+            state.signInApiStatus.stepFailed(error: ErrorState.codeToErrorState(code: error.code))
+            return .none
+
+            // MARK: - sign out
 
         case .signOut:
-            do {
-                try AuthState.auth.signOut()
-                // サインアウト処理完了後にcurrentUserを更新する
-                return .task(operation: { .updateCurrentUser })
-            } catch let signOutError as NSError {
-                // return .task(operation: { .signOutStatus(step: .failed(ErrorState.createFireBaseAuthErrorModel(error: signOutError))) })
-                return .none
+            state.signOutApiStatus.stepPending()
+            return .task {
+                .onSignOutResponse(
+                    await TaskResult {
+                        try await self.signOut()
+                    })
             }
-        case let .createUserStatus(nextStep):
-            switch nextStep {
-            case .waiting:
-                state.createaUserApiStatus.stepWaiting()
-            case .pending:
-                state.createaUserApiStatus.stepPending()
-                return .none
-            case let .success(result):
-                state.createaUserApiStatus.stepSuccess(result: result)
-            case let .failed(error):
-                state.createaUserApiStatus.stepFailed(error: error)
-            }
+        case let .onSignOutResponse(.success(result)):
+            state.signOutApiStatus.stepSuccess(result: result)
             return .none
-
-        case let .signOutStatus(step):
-            switch step {
-            case .pending:
-                state.signOutApiStatus.stepPending()
-            case .waiting:
-                state.signOutApiStatus.stepWaiting()
-            case let .success(result):
-                state.signOutApiStatus.stepSuccess(result: result)
-            case let .failed(error):
-                state.signOutApiStatus.stepFailed(error: error)
-            }
+        case let .onSignOutResponse(.failure(error)):
+            let error = error as NSError
+            state.signOutApiStatus.stepFailed(error: ErrorState.codeToErrorState(code: error.code))
             return .none
         }
     }
 }
 
 extension AuthReducer {
-    func createUser(
-        email: String,
-        password: String,
-        completion: @escaping (Result<Bool, ErrorState>) -> Void
-    ) {
-        Auth.auth().createUser(withEmail: email, password: password) {
-            result, error in if error == nil {
-                if let user = result?.user {
-                    user.sendEmailVerification { error in
-                        if error != nil {
-                            completion(.failure(ErrorState.sendEmailVerificatioinError))
-                        } else {
-                            completion(.success(true))
-                        }
-                    }
-                } else {
-                    completion(.failure(ErrorState.userNotFound))
-                }
-            } else {
-                let error = error! as NSError
-                completion(.failure(ErrorState.codeToErrorState(code: error.code)))
-            }
+    @MainActor
+    func createUser(email: String, password: String) async throws -> AuthDataResult {
+        do {
+            return try await AuthState.auth.createUser(withEmail: email, password: password)
+        } catch {
+            throw error
+        }
+    }
+
+    @MainActor
+    func sendEmailVerification(user: User) async throws -> Bool {
+        do {
+            try await user.sendEmailVerification()
+            return true
+        } catch {
+            throw error
+        }
+    }
+
+    @MainActor
+    func signIn(email: String, password: String) async throws -> AuthDataResult {
+        do {
+            return try await AuthState.auth.signIn(withEmail: email, password: password)
+        } catch {
+            throw error
+        }
+    }
+
+    @MainActor
+    func signOut() async throws -> Bool {
+        do {
+            try AuthState.auth.signOut()
+            return true
+        } catch {
+            throw error
         }
     }
 }

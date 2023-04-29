@@ -5,21 +5,24 @@
 //  Created by Yuya Morimoto on R 5/04/23.
 //
 
+import ComposableArchitecture
 import SwiftUI
 
 struct SignInPage: View {
     @State var isSignIn = false
-    
+
     @State var email: String = ""
     @State var password: String = ""
-    
+
+    let viewStore: ViewStoreOf<AuthReducer>
+
     var signUpButtonBgColor: Color {
         if email == "" || password == "" {
             return Color.DisableColor
         }
         return Color.Primary
     }
-    
+
     var body: some View {
         VStack {
             HStack {
@@ -56,7 +59,16 @@ struct SignInPage: View {
                         .keyboardType(.alphabet)
                         .font(.callout)
                 }.padding(.top)
-                
+                ErrorText()
+                Button(action: {
+                    viewStore.send(.signIn(email: email, password: password))
+                }, label: {
+                    Text("サインイン")
+                        .frame(maxWidth: .infinity)
+                })
+                .frame(maxWidth: .infinity)
+                .disabled(email == "" || password == "")
+                .padding(.top)
                 Spacer()
             }
             .padding(30)

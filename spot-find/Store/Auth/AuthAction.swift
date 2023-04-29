@@ -6,13 +6,26 @@
 //
 
 import ComposableArchitecture
+import FirebaseAuth
 
 enum AuthAction: Equatable {
-    case updateCurrentUser
-    case createUserStart(email: String, password: String)
-    case createUserExecute(email: String, password: String)
-    case createUserEnd(_ result: Result<Bool, ErrorState>)
-    case createUserStatus(nextStep: ApiStatusAction<CreateUserResult>)
+    // MARK: - create user
+
+    case createUser(email: String, password: String)
+    case onCreateUserResponse(TaskResult<CreateUserResult>)
+
+    // MARK: - send email verification
+
+    case sendEmailVerification(user: User)
+    case onSendEmailVerificationResponse(TaskResult<SendEmailVerificationResult>)
+    
+    // MARK: - sign in
+
+    case signIn(email: String, password: String)
+    case onSignInResponse(TaskResult<SignInResult>)
+
+    // MARK: - sign out
+
     case signOut
-    case signOutStatus(step: ApiStatusAction<SignOutResult>)
+    case onSignOutResponse(TaskResult<SignOutResult>)
 }

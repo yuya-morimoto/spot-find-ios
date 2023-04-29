@@ -11,7 +11,8 @@ import SwiftUI
 
 struct AuthState: Equatable {
     static let auth: Auth = .auth()
-    var currentUser: User?
     var createaUserApiStatus: CreateUserApiStatus = .init()
+    var sendEmailVerificationApiStatus: SendEmailVerificationApiStatus = .init()
+    var signInApiStatus: SignInApiStatus = .init()
     var signOutApiStatus: SignOutApiStatus = .init()
 }
