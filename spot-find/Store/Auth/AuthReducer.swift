@@ -10,12 +10,30 @@ import FirebaseAuth
 
 struct AuthReducer: ReducerProtocol {
     @Dependency(\.authClient.createUser) var createUser
+    @Dependency(\.authClient.latestCurrentUser) var latestCurrentUser
     @Dependency(\.authClient.sendEmailVerification) var sendEmailVerification
     @Dependency(\.authClient.signIn) var signIn
     @Dependency(\.authClient.signOut) var signOut
 
     func reduce(into state: inout AuthState, action: AuthAction) -> EffectTask<AuthAction> {
         switch action {
+            // MARK: - update current user
+
+        case .checkEmailVerification:
+            return .task {
+                .onCheckEmailVerificationResponse(
+                    await TaskResult {
+                        try await latestCurrentUser()
+                    })
+            }
+        case let .onCheckEmailVerificationResponse(.success(result)):
+            if let user = result {
+                state.isEmailVerified = user.isEmailVerified
+            }
+            return .none
+        case .onCheckEmailVerificationResponse(.failure):
+            return .none
+
             // MARK: - create user
 
         case let .createUser(email, password):
@@ -47,7 +65,7 @@ struct AuthReducer: ReducerProtocol {
             }
         case let .onSendEmailVerificationResponse(.success(result)):
             state.sendEmailVerificationApiStatus.stepSuccess(result: result)
-            return .task(operation: { .signOut })
+            return .none
         case let .onSendEmailVerificationResponse(.failure(error)):
             let error = error as NSError
             state.sendEmailVerificationApiStatus.stepFailed(error: ErrorState.codeToErrorState(code: error.code))

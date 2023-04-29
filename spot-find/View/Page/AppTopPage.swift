@@ -10,6 +10,7 @@ import SwiftUI
 
 struct AppTopPage: View {
     let store: StoreOf<AuthReducer>
+    
 
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
