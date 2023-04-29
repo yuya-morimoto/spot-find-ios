@@ -25,3 +25,8 @@ struct AuthState: Equatable {
         }
     }
 }
+
+typealias CreateUserApiStatus = ApiStatusState<AuthDataResult>
+typealias SendEmailVerificationApiStatus = ApiStatusState<Bool>
+typealias SignInApiStatus = ApiStatusState<AuthDataResult>
+typealias SignOutApiStatus = ApiStatusState<Bool>

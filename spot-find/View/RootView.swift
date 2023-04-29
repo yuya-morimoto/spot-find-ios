@@ -20,7 +20,7 @@ struct RootView: View {
     var body: some View {
         WithViewStore(self.store) { viewStore in
             if let user = currentUser() {
-                if user.isEmailVerified == true && viewStore.isEmailVerified == true {
+                if user.isEmailVerified == true || viewStore.isEmailVerified == true {
                     AppTopPage(store: self.store)
                 } else {
                     WaitingEmailVerificationPage(viewStore: viewStore)
