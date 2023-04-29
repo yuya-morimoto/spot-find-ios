@@ -32,7 +32,6 @@
 		9945071B29F43AB0003FC0E5 /* ApiStatusState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945071A29F43AB0003FC0E5 /* ApiStatusState.swift */; };
 		9947CB6629F4F6A100657867 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6529F4F6A100657867 /* SignUpPage.swift */; };
 		9947CB6C29F52F9F00657867 /* ApiStatusAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6B29F52F9F00657867 /* ApiStatusAction.swift */; };
-		9947CB6E29F5366300657867 /* AuthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6D29F5366300657867 /* AuthType.swift */; };
 		99B99E6E29FD0612007CDB0C /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E6D29FD0612007CDB0C /* AuthClient.swift */; };
 		99B99E7029FD0730007CDB0C /* AuthEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E6F29FD0730007CDB0C /* AuthEnvironment.swift */; };
 		99B99E7529FD19B8007CDB0C /* WaitingEmailVerificationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */; };
@@ -82,7 +81,6 @@
 		9945071A29F43AB0003FC0E5 /* ApiStatusState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiStatusState.swift; sourceTree = "<group>"; };
 		9947CB6529F4F6A100657867 /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
 		9947CB6B29F52F9F00657867 /* ApiStatusAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiStatusAction.swift; sourceTree = "<group>"; };
-		9947CB6D29F5366300657867 /* AuthType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthType.swift; sourceTree = "<group>"; };
 		99B99E6D29FD0612007CDB0C /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		99B99E6F29FD0730007CDB0C /* AuthEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEnvironment.swift; sourceTree = "<group>"; };
 		99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingEmailVerificationPage.swift; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 		990AF46F29F3EFF700EB6859 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				9947CB6D29F5366300657867 /* AuthType.swift */,
 				99B99E6F29FD0730007CDB0C /* AuthEnvironment.swift */,
 				990AF46B29F3EE3700EB6859 /* AuthState.swift */,
 				990AF46D29F3EF8700EB6859 /* AuthAction.swift */,
@@ -447,7 +444,6 @@
 				9945071729F43541003FC0E5 /* ErrorState.swift in Sources */,
 				990AF45B29F3CF4800EB6859 /* SignTopView.swift in Sources */,
 				9945071229F434A8003FC0E5 /* ImageExtension.swift in Sources */,
-				9947CB6E29F5366300657867 /* AuthType.swift in Sources */,
 				99B99E7529FD19B8007CDB0C /* WaitingEmailVerificationPage.swift in Sources */,
 				99B99E6E29FD0612007CDB0C /* AuthClient.swift in Sources */,
 				9945071429F43507003FC0E5 /* ErrorText.swift in Sources */,
