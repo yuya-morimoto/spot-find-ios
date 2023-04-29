@@ -7,14 +7,10 @@
 
 import FirebaseAuth
 
-typealias CreateUserResult = AuthDataResult
-typealias CreateUserApiStatus = ApiStatusState<CreateUserResult>
+typealias CreateUserApiStatus = ApiStatusState<AuthDataResult>
 
-typealias SendEmailVerificationResult = Bool
-typealias SendEmailVerificationApiStatus = ApiStatusState<SendEmailVerificationResult>
+typealias SendEmailVerificationApiStatus = ApiStatusState<Bool>
 
-typealias SignInResult = AuthDataResult
-typealias SignInApiStatus = ApiStatusState<SignInResult>
+typealias SignInApiStatus = ApiStatusState<AuthDataResult>
 
-typealias SignOutResult = Bool
-typealias SignOutApiStatus = ApiStatusState<SignOutResult>
+typealias SignOutApiStatus = ApiStatusState<Bool>

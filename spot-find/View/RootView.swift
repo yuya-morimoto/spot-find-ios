@@ -6,6 +6,7 @@
 //
 
 import ComposableArchitecture
+import FirebaseAuth
 import SwiftUI
 
 struct RootView: View {
@@ -16,8 +17,8 @@ struct RootView: View {
     }
 
     var body: some View {
-        WithViewStore(self.store, observe: { $0 }) { viewStore in
-            if AuthState.auth.currentUser != nil {
+        WithViewStore(self.store, observe: { $0 }) { _ in
+            if Auth.auth().currentUser != nil {
                 AppTopPage(store: self.store)
             } else {
                 SignTopView(store: self.store)
