@@ -7,6 +7,7 @@
 
 import ComposableArchitecture
 import SwiftUI
+import FirebaseAuth
 
 struct SignTopView: View {
     @State private var signInSheet = false

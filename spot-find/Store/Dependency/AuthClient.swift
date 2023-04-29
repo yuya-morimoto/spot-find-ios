@@ -14,19 +14,22 @@ public struct AuthClient {
     public var signIn: (String, String) async throws -> AuthDataResult
     public var signOut: () async throws -> Bool
     public var currentUser: () -> User?
+    public var latestCurrentUser: () async throws -> User?
 
     public init(
         createUser: @escaping (String, String) async throws -> AuthDataResult,
         sendEmailVerification: @escaping () async throws -> Bool,
         signIn: @escaping (String, String) async throws -> AuthDataResult,
         signOut: @escaping () async throws -> Bool,
-        currentUser: @escaping () -> User?
+        currentUser: @escaping () -> User?,
+        latestCurrentUser: @escaping () async throws -> User?
     ) {
         self.createUser = createUser
         self.sendEmailVerification = sendEmailVerification
         self.signIn = signIn
         self.signOut = signOut
         self.currentUser = currentUser
+        self.latestCurrentUser = latestCurrentUser
     }
 }
 
@@ -48,6 +51,12 @@ public extension AuthClient {
         },
         currentUser: {
             Auth.auth().currentUser
+        },
+        latestCurrentUser: {
+            if let currentUser = Auth.auth().currentUser {
+                try await currentUser.reload()
+            }
+            return Auth.auth().currentUser
         }
     )
 }
@@ -58,7 +67,8 @@ public extension AuthClient {
         sendEmailVerification: XCTUnimplemented("\(Self.self).sendEmailVerification"),
         signIn: XCTUnimplemented("\(Self.self).signIn"),
         signOut: XCTUnimplemented("\(Self.self).signOut"),
-        currentUser: XCTUnimplemented("\(Self.self).currentUsesr")
+        currentUser: XCTUnimplemented("\(Self.self).currentUsesr"),
+        latestCurrentUser: XCTUnimplemented("\(Self.self).latestCurrentUser")
     )
 }
 

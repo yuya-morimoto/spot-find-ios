@@ -10,16 +10,21 @@ import FirebaseAuth
 import SwiftUI
 
 struct RootView: View {
-    let store: Store<AuthState, AuthAction>
+    @Dependency(\.authClient.currentUser) var currentUser
+    var store: StoreOf<AuthReducer>
 
     init() {
         self.store = Store(initialState: AuthState(), reducer: AuthReducer())
     }
 
     var body: some View {
-        WithViewStore(self.store, observe: { $0 }) { _ in
-            if Auth.auth().currentUser != nil {
-                AppTopPage(store: self.store)
+        WithViewStore(self.store) { viewStore in
+            if let user = currentUser() {
+                if user.isEmailVerified == true && viewStore.isEmailVerified == true {
+                    AppTopPage(store: self.store)
+                } else {
+                    WaitingEmailVerificationPage(viewStore: viewStore)
+                }
             } else {
                 SignTopView(store: self.store)
             }

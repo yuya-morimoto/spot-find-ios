@@ -35,6 +35,7 @@
 		9947CB6E29F5366300657867 /* AuthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6D29F5366300657867 /* AuthType.swift */; };
 		99B99E6E29FD0612007CDB0C /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E6D29FD0612007CDB0C /* AuthClient.swift */; };
 		99B99E7029FD0730007CDB0C /* AuthEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E6F29FD0730007CDB0C /* AuthEnvironment.swift */; };
+		99B99E7529FD19B8007CDB0C /* WaitingEmailVerificationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		9947CB6D29F5366300657867 /* AuthType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthType.swift; sourceTree = "<group>"; };
 		99B99E6D29FD0612007CDB0C /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		99B99E6F29FD0730007CDB0C /* AuthEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEnvironment.swift; sourceTree = "<group>"; };
+		99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingEmailVerificationPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				9945070A29F433FD003FC0E5 /* SignInPage.swift */,
 				9947CB6529F4F6A100657867 /* SignUpPage.swift */,
 				990AF47629F3F71E00EB6859 /* AppTopPage.swift */,
+				99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				990AF45B29F3CF4800EB6859 /* SignTopView.swift in Sources */,
 				9945071229F434A8003FC0E5 /* ImageExtension.swift in Sources */,
 				9947CB6E29F5366300657867 /* AuthType.swift in Sources */,
+				99B99E7529FD19B8007CDB0C /* WaitingEmailVerificationPage.swift in Sources */,
 				99B99E6E29FD0612007CDB0C /* AuthClient.swift in Sources */,
 				9945071429F43507003FC0E5 /* ErrorText.swift in Sources */,
 				9945071029F43440003FC0E5 /* ColorExtension.swift in Sources */,
