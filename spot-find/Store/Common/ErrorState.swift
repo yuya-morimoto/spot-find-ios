@@ -77,9 +77,21 @@ extension ErrorState {
         case 4001:
             return .sendEmailVerificatioinError
         case 4500:
+            return .passwordFormatValid
+        case AuthErrorCode.invalidEmail.rawValue:
             return .invalidEmailError
+        case AuthErrorCode.emailAlreadyInUse.rawValue:
+            return .emailAlreadyInUse
+        case AuthErrorCode.weakPassword.rawValue:
+            return .weakPassword
+        case AuthErrorCode.userNotFound.rawValue:
+            return .userNotFound
+        case AuthErrorCode.wrongPassword.rawValue:
+            return .wrongPassword
+        case AuthErrorCode.userDisabled.rawValue:
+            return .userDisabled
         default:
-            return ErrorState.unexpectedError
+            return .unexpectedError
         }
     }
 }

@@ -11,6 +11,7 @@ import FirebaseAuth
 struct AuthReducer: ReducerProtocol {
     @Dependency(\.authClient.createUser) var createUser
     @Dependency(\.authClient.latestCurrentUser) var latestCurrentUser
+    @Dependency(\.authClient.currentUser) var currentUser
     @Dependency(\.authClient.sendEmailVerification) var sendEmailVerification
     @Dependency(\.authClient.signIn) var signIn
     @Dependency(\.authClient.signOut) var signOut
@@ -18,6 +19,12 @@ struct AuthReducer: ReducerProtocol {
     func reduce(into state: inout AuthState, action: AuthAction) -> EffectTask<AuthAction> {
         switch action {
             // MARK: - update current user
+
+        case .updateCurrentUser:
+            state.currentUser = currentUser()
+            return .none
+
+            // MARK: - email verification
 
         case .checkEmailVerification:
             return .task {
@@ -46,11 +53,15 @@ struct AuthReducer: ReducerProtocol {
                 )
             }
         case let .onCreateUserResponse(.success(result)):
+            state.currentUser = currentUser()
             state.createaUserApiStatus.stepSuccess(result: result)
             return .task(operation: { .sendEmailVerification })
         case let .onCreateUserResponse(.failure(error)):
             let error = error as NSError
             state.createaUserApiStatus.stepFailed(error: ErrorState.codeToErrorState(code: error.code))
+            return .none
+        case .resetCreateUser:
+            state.createaUserApiStatus.reset()
             return .none
 
             // MARK: - send email verification
@@ -82,11 +93,15 @@ struct AuthReducer: ReducerProtocol {
                     })
             }
         case let .onSignInResponse(.success(result)):
+            state.currentUser = currentUser()
             state.signInApiStatus.stepSuccess(result: result)
             return .none
         case let .onSignInResponse(.failure(error)):
             let error = error as NSError
             state.signInApiStatus.stepFailed(error: ErrorState.codeToErrorState(code: error.code))
+            return .none
+        case .resetSignIn:
+            state.signInApiStatus.reset()
             return .none
 
             // MARK: - sign out
@@ -100,6 +115,7 @@ struct AuthReducer: ReducerProtocol {
                     })
             }
         case let .onSignOutResponse(.success(result)):
+            state.currentUser = nil
             state.signOutApiStatus.stepSuccess(result: result)
             return .none
         case let .onSignOutResponse(.failure(error)):

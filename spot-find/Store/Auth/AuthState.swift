@@ -10,6 +10,7 @@ import FirebaseAuth
 import SwiftUI
 
 struct AuthState: Equatable {
+    var currentUser: User?
     // メールアドレス認証後の検知用
     var isEmailVerified: Bool
     var createaUserApiStatus: CreateUserApiStatus = .init()
@@ -19,8 +20,10 @@ struct AuthState: Equatable {
 
     init() {
         if let user = Auth.auth().currentUser {
+            self.currentUser = user
             self.isEmailVerified = user.isEmailVerified
         } else {
+            self.currentUser = nil
             self.isEmailVerified = false
         }
     }

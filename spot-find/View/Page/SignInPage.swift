@@ -37,41 +37,10 @@ struct SignInPage: View {
                 Spacer()
             }.padding()
             Spacer()
-            VStack {
-                VStack(alignment: .leading) {
-                    Text("メールアドレス")
-                        .foregroundColor(.ForegroundColor)
-                        .font(.callout)
-                    TextField("example@spot-find.jp", text: $email)
-                        .foregroundColor(.ForegroundColor)
-                        .keyboardType(.emailAddress)
-                        .autocapitalization(.none)
-                        .font(.callout)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(maxWidth: .infinity)
-                }
-                VStack(alignment: .leading) {
-                    Text("パスワード")
-                        .foregroundColor(.ForegroundColor)
-                        .font(.callout)
-                    SecureField("8-16文字の半角英数字", text: $password)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .keyboardType(.alphabet)
-                        .font(.callout)
-                }.padding(.top)
-                ErrorText()
-                Button(action: {
-                    viewStore.send(.signIn(email: email, password: password))
-                }, label: {
-                    Text("サインイン")
-                        .frame(maxWidth: .infinity)
-                })
-                .frame(maxWidth: .infinity)
-                .disabled(email == "" || password == "")
-                .padding(.top)
-                Spacer()
-            }
-            .padding(30)
+            SignInForm(viewStore: viewStore)
+            Spacer()
         }
+        .padding(30)
+        .background(Color.BackgroundColor)
     }
 }
