@@ -8,6 +8,6 @@
 import SwiftUI
 
 extension Image {
-    static let Icon = "Icon"
-    static let TopIcon = "TopIcon"
+    static let AppIcon = "AppIcon"
+    static let AppIntroIcon = "AppIntroIcon"
 }

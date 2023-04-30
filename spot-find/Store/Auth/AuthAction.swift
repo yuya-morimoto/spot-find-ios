@@ -9,7 +9,12 @@ import ComposableArchitecture
 import FirebaseAuth
 
 enum AuthAction: Equatable {
+    // MARK: - current user
+
+    case updateCurrentUser
+
     // MARK: - update current user
+
     case checkEmailVerification
     case onCheckEmailVerificationResponse(TaskResult<User?>)
 
@@ -17,6 +22,7 @@ enum AuthAction: Equatable {
 
     case createUser(email: String, password: String)
     case onCreateUserResponse(TaskResult<AuthDataResult>)
+    case resetCreateUser
 
     // MARK: - send email verification
 
@@ -27,6 +33,7 @@ enum AuthAction: Equatable {
 
     case signIn(email: String, password: String)
     case onSignInResponse(TaskResult<AuthDataResult>)
+    case resetSignIn
 
     // MARK: - sign out
 

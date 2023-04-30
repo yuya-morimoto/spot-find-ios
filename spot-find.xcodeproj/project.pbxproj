@@ -18,7 +18,7 @@
 		990AF44929F3BF3400EB6859 /* GoogleService-Info-Stg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 990AF44629F3BF3400EB6859 /* GoogleService-Info-Stg.plist */; };
 		990AF44A29F3BF3400EB6859 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = 990AF44729F3BF3400EB6859 /* GoogleService-Info-Dev.plist */; };
 		990AF45229F3C75D00EB6859 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 990AF45129F3C75D00EB6859 /* ComposableArchitecture */; };
-		990AF45B29F3CF4800EB6859 /* SignTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF45A29F3CF4800EB6859 /* SignTopView.swift */; };
+		990AF45B29F3CF4800EB6859 /* SignTopPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF45A29F3CF4800EB6859 /* SignTopPage.swift */; };
 		990AF46C29F3EE3700EB6859 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF46B29F3EE3700EB6859 /* AuthState.swift */; };
 		990AF46E29F3EF8700EB6859 /* AuthAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF46D29F3EF8700EB6859 /* AuthAction.swift */; };
 		990AF47129F3F06600EB6859 /* AuthReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990AF47029F3F06600EB6859 /* AuthReducer.swift */; };
@@ -35,6 +35,13 @@
 		99B99E6E29FD0612007CDB0C /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E6D29FD0612007CDB0C /* AuthClient.swift */; };
 		99B99E7029FD0730007CDB0C /* AuthEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E6F29FD0730007CDB0C /* AuthEnvironment.swift */; };
 		99B99E7529FD19B8007CDB0C /* WaitingEmailVerificationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */; };
+		99B99E7729FD6523007CDB0C /* StorePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7629FD6523007CDB0C /* StorePreview.swift */; };
+		99B99E7A29FD65E4007CDB0C /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7929FD65E4007CDB0C /* CapsuleButtonStyle.swift */; };
+		99B99E7C29FD66DA007CDB0C /* SignInSheetToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7B29FD66DA007CDB0C /* SignInSheetToggleButton.swift */; };
+		99B99E7E29FD69AE007CDB0C /* SignUpSheetToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7D29FD69AE007CDB0C /* SignUpSheetToggleButton.swift */; };
+		99B99E8029FD6CA3007CDB0C /* SignUpForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7F29FD6CA3007CDB0C /* SignUpForm.swift */; };
+		99B99E8429FD76BF007CDB0C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E8329FD76BF007CDB0C /* StringExtension.swift */; };
+		99B99E8629FE27F5007CDB0C /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E8529FE27F5007CDB0C /* SignInForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +74,7 @@
 		990AF44529F3BF3400EB6859 /* GoogleService-Info-Prd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Prd.plist"; sourceTree = "<group>"; };
 		990AF44629F3BF3400EB6859 /* GoogleService-Info-Stg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Stg.plist"; sourceTree = "<group>"; };
 		990AF44729F3BF3400EB6859 /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
-		990AF45A29F3CF4800EB6859 /* SignTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTopView.swift; sourceTree = "<group>"; };
+		990AF45A29F3CF4800EB6859 /* SignTopPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTopPage.swift; sourceTree = "<group>"; };
 		990AF46B29F3EE3700EB6859 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		990AF46D29F3EF8700EB6859 /* AuthAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAction.swift; sourceTree = "<group>"; };
 		990AF47029F3F06600EB6859 /* AuthReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthReducer.swift; sourceTree = "<group>"; };
@@ -84,6 +91,13 @@
 		99B99E6D29FD0612007CDB0C /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		99B99E6F29FD0730007CDB0C /* AuthEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEnvironment.swift; sourceTree = "<group>"; };
 		99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingEmailVerificationPage.swift; sourceTree = "<group>"; };
+		99B99E7629FD6523007CDB0C /* StorePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePreview.swift; sourceTree = "<group>"; };
+		99B99E7929FD65E4007CDB0C /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
+		99B99E7B29FD66DA007CDB0C /* SignInSheetToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSheetToggleButton.swift; sourceTree = "<group>"; };
+		99B99E7D29FD69AE007CDB0C /* SignUpSheetToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSheetToggleButton.swift; sourceTree = "<group>"; };
+		99B99E7F29FD6CA3007CDB0C /* SignUpForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpForm.swift; sourceTree = "<group>"; };
+		99B99E8329FD76BF007CDB0C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		99B99E8529FE27F5007CDB0C /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				990AF41B29F3BA8900EB6859 /* Preview Assets.xcassets */,
+				99B99E7629FD6523007CDB0C /* StorePreview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -191,11 +206,11 @@
 		990AF44329F3BDC700EB6859 /* Page */ = {
 			isa = PBXGroup;
 			children = (
-				990AF45A29F3CF4800EB6859 /* SignTopView.swift */,
+				990AF45A29F3CF4800EB6859 /* SignTopPage.swift */,
 				9945070A29F433FD003FC0E5 /* SignInPage.swift */,
 				9947CB6529F4F6A100657867 /* SignUpPage.swift */,
-				990AF47629F3F71E00EB6859 /* AppTopPage.swift */,
 				99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */,
+				990AF47629F3F71E00EB6859 /* AppTopPage.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -224,8 +239,9 @@
 			isa = PBXGroup;
 			children = (
 				990AF47429F3F65700EB6859 /* RootView.swift */,
-				990AF45E29F3D79300EB6859 /* Component */,
 				990AF44329F3BDC700EB6859 /* Page */,
+				990AF45E29F3D79300EB6859 /* Component */,
+				99B99E7829FD65B9007CDB0C /* Style */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,7 +249,8 @@
 		990AF45E29F3D79300EB6859 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				9945071329F43507003FC0E5 /* ErrorText.swift */,
+				99B99E8129FD6FC9007CDB0C /* Part */,
+				99B99E8229FD6FCF007CDB0C /* Unit */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -254,6 +271,7 @@
 			children = (
 				9945070F29F43440003FC0E5 /* ColorExtension.swift */,
 				9945071129F434A8003FC0E5 /* ImageExtension.swift */,
+				99B99E8329FD76BF007CDB0C /* StringExtension.swift */,
 			);
 			path = Extensioin;
 			sourceTree = "<group>";
@@ -274,6 +292,33 @@
 				99B99E6D29FD0612007CDB0C /* AuthClient.swift */,
 			);
 			path = Dependency;
+			sourceTree = "<group>";
+		};
+		99B99E7829FD65B9007CDB0C /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				99B99E7929FD65E4007CDB0C /* CapsuleButtonStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		99B99E8129FD6FC9007CDB0C /* Part */ = {
+			isa = PBXGroup;
+			children = (
+				9945071329F43507003FC0E5 /* ErrorText.swift */,
+			);
+			path = Part;
+			sourceTree = "<group>";
+		};
+		99B99E8229FD6FCF007CDB0C /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				99B99E7B29FD66DA007CDB0C /* SignInSheetToggleButton.swift */,
+				99B99E7D29FD69AE007CDB0C /* SignUpSheetToggleButton.swift */,
+				99B99E8529FE27F5007CDB0C /* SignInForm.swift */,
+				99B99E7F29FD6CA3007CDB0C /* SignUpForm.swift */,
+			);
+			path = Unit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,8 +487,11 @@
 			files = (
 				9945071B29F43AB0003FC0E5 /* ApiStatusState.swift in Sources */,
 				9945071729F43541003FC0E5 /* ErrorState.swift in Sources */,
-				990AF45B29F3CF4800EB6859 /* SignTopView.swift in Sources */,
+				990AF45B29F3CF4800EB6859 /* SignTopPage.swift in Sources */,
+				99B99E8629FE27F5007CDB0C /* SignInForm.swift in Sources */,
+				99B99E7729FD6523007CDB0C /* StorePreview.swift in Sources */,
 				9945071229F434A8003FC0E5 /* ImageExtension.swift in Sources */,
+				99B99E7A29FD65E4007CDB0C /* CapsuleButtonStyle.swift in Sources */,
 				99B99E7529FD19B8007CDB0C /* WaitingEmailVerificationPage.swift in Sources */,
 				99B99E6E29FD0612007CDB0C /* AuthClient.swift in Sources */,
 				9945071429F43507003FC0E5 /* ErrorText.swift in Sources */,
@@ -453,10 +501,14 @@
 				9945070B29F433FD003FC0E5 /* SignInPage.swift in Sources */,
 				990AF41529F3BA8800EB6859 /* spot_findApp.swift in Sources */,
 				9947CB6629F4F6A100657867 /* SignUpPage.swift in Sources */,
+				99B99E7E29FD69AE007CDB0C /* SignUpSheetToggleButton.swift in Sources */,
 				9947CB6C29F52F9F00657867 /* ApiStatusAction.swift in Sources */,
+				99B99E8029FD6CA3007CDB0C /* SignUpForm.swift in Sources */,
 				990AF46C29F3EE3700EB6859 /* AuthState.swift in Sources */,
 				990AF47729F3F71E00EB6859 /* AppTopPage.swift in Sources */,
+				99B99E8429FD76BF007CDB0C /* StringExtension.swift in Sources */,
 				990AF47529F3F65700EB6859 /* RootView.swift in Sources */,
+				99B99E7C29FD66DA007CDB0C /* SignInSheetToggleButton.swift in Sources */,
 				99B99E7029FD0730007CDB0C /* AuthEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

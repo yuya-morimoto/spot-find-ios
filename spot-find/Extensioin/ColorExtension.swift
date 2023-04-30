@@ -11,5 +11,6 @@ extension Color {
     static let ForegroundColor = Color("ForegroundColor")
     static let BackgroundColor = Color("BackgroundColor")
     static let Primary = Color("Primary")
+    static let PrimaryContrast = Color("BackgroundColor")
     static let DisableColor = Color("DisableColor")
 }
