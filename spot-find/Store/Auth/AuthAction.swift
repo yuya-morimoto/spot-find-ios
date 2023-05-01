@@ -36,7 +36,6 @@ enum AuthAction: Equatable {
     case resetSignIn
 
     // MARK: - sign out
-
     case signOut
     case onSignOutResponse(TaskResult<Bool>)
 }

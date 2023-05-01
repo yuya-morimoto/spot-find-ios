@@ -9,12 +9,10 @@ import ComposableArchitecture
 import SwiftUI
 
 struct SignInPage: View {
-    @State var isSignIn = false
-
     @State var email: String = ""
     @State var password: String = ""
 
-    let viewStore: ViewStoreOf<AuthReducer>
+    let viewStore: AppViewStore
 
     var signUpButtonBgColor: Color {
         if email == "" || password == "" {

@@ -12,8 +12,6 @@ struct SignUpSheetToggleButton: View {
     @State var isShowingSheet: Bool = false
     var sheetPage: SignUpPage
 
-    let viewStore: ViewStoreOf<AuthReducer>
-
     var body: some View {
         Button(action: {
             isShowingSheet.toggle()

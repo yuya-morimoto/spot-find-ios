@@ -18,6 +18,7 @@ enum ErrorState: Error, Equatable {
     case userNotFound
     case wrongPassword
     case userDisabled
+    case error
     case unexpectedError
 
     var code: Int {
@@ -44,6 +45,8 @@ enum ErrorState: Error, Equatable {
         case .userDisabled:
             // 17005
             return AuthErrorCode.userDisabled.rawValue
+        case .error:
+            return 9998
         case .unexpectedError:
             return 9999
         }
@@ -52,21 +55,23 @@ enum ErrorState: Error, Equatable {
     var message: String {
         switch self {
         case .sendEmailVerificatioinError:
-            return "確認用メールの送信に失敗しました。"
+            return "確認用メールの送信に失敗しました"
         case .passwordFormatValid:
-            return "パスワードは8-16文字の半角英数字で入力してください。"
+            return "パスワードは8-16文字の半角英数字で入力してください"
         case .invalidEmailError:
-            return "メールアドレスの形式が違います。"
+            return "メールアドレスの形式が違います"
         case .emailAlreadyInUse:
             return "このメールアドレスはすでに使われています。"
         case .weakPassword:
-            return "パスワードが弱すぎます。"
+            return "パスワードが弱すぎます"
         case .userNotFound, .wrongPassword:
-            return "メールアドレス、またはパスワードが間違っています。"
+            return "メールアドレスまたはパスワードが間違っています"
         case .userDisabled:
-            return "このユーザーアカウントは無効化されています。"
+            return "このユーザーアカウントは無効化されています"
+        case .error:
+            return "処理に失敗しました"
         case .unexpectedError:
-            return "予期せぬエラーが発生しました。しばらく時間を置いてから再度お試しください。"
+            return "予期せぬエラーが発生しました。しばらく時間を置いてから再度お試しください"
         }
     }
 }
@@ -74,10 +79,6 @@ enum ErrorState: Error, Equatable {
 extension ErrorState {
     static func codeToErrorState(code: Int) -> ErrorState {
         switch code {
-        case 4001:
-            return .sendEmailVerificatioinError
-        case 4500:
-            return .passwordFormatValid
         case AuthErrorCode.invalidEmail.rawValue:
             return .invalidEmailError
         case AuthErrorCode.emailAlreadyInUse.rawValue:

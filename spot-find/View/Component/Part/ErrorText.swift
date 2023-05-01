@@ -18,3 +18,9 @@ struct ErrorText: View {
         }
     }
 }
+
+struct ErrorText_Previews: PreviewProvider {
+    static var previews: some View {
+        ErrorText(errorText: "エラーです")
+    }
+}

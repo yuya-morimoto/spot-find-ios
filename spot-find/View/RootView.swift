@@ -10,23 +10,24 @@ import FirebaseAuth
 import SwiftUI
 
 struct RootView: View {
-    var store: StoreOf<AuthReducer>
-
-    init() {
-        self.store = Store(initialState: AuthState(), reducer: AuthReducer())
-    }
+    var store: AppStore = Store(initialState: AppReducer.State(), reducer: AppReducer())
 
     var body: some View {
-        WithViewStore(self.store) { viewStore in
-            if let user = viewStore.currentUser {
-                if user.isEmailVerified == true || viewStore.isEmailVerified == true {
-                    AppTopPage(store: self.store)
+        ZStack {
+            WithViewStore(self.store) { viewStore in
+                if let user = viewStore.auth.currentUser {
+                    // メールアドレス認証状態を検知(新規登録時・再ログイン時・ログアウトから新規登録で動きが違う)
+                    if user.isEmailVerified == true && viewStore.ui.isLoadedDelayEmailVerification {
+                        AppTopPage(store: self.store)
+                    } else {
+                        WaitingEmailVerificationPage(viewStore: viewStore)
+                    }
                 } else {
-                    WaitingEmailVerificationPage(viewStore: viewStore)
+                    SignTopPage(store: self.store)
                 }
-            } else {
-                SignTopPage(store: self.store)
             }
+            // バックグラウンドでステートの監視を行う
+            BackgroundPage(store: self.store)
         }
     }
 }

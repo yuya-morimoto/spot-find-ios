@@ -1,5 +1,5 @@
 //
-//  ApiStatusState.swift
+//  StatusState.swift
 //  spot-find
 //
 //  Created by Yuya Morimoto on R 5/04/23.
@@ -16,7 +16,7 @@ enum Status {
     case failed
 }
 
-struct ApiStatusState<T>: Equatable where T: Equatable {
+struct StatusState<T>: Equatable where T: Equatable {
     var status: Status = .waiting
     var result: T?
     var error: ErrorState?
@@ -28,7 +28,7 @@ struct ApiStatusState<T>: Equatable where T: Equatable {
     }
 }
 
-extension ApiStatusState {
+extension StatusState {
     mutating func reset() {
         self.status = .waiting
         self.result = nil

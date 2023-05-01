@@ -10,4 +10,5 @@ import SwiftUI
 extension Image {
     static let AppIcon = "AppIcon"
     static let AppIntroIcon = "AppIntroIcon"
+    static let SentEmailIcon = "SentEmailIcon"
 }

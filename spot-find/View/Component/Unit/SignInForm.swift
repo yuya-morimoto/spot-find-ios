@@ -13,7 +13,7 @@ struct SignInForm: View {
     @State private var validEmailMessage: String? = nil
     @State private var password: String = ""
 
-    let viewStore: ViewStoreOf<AuthReducer>
+    let viewStore: AppViewStore
 
     var body: some View {
         VStack {
@@ -47,22 +47,24 @@ struct SignInForm: View {
 
             // MARK: - submit
 
-            ErrorText(errorText: self.viewStore.signInApiStatus.error?.message)
-            Button(action: {
-                if self.validate() {
-                    self.viewStore.send(.signIn(email: self.email, password: self.password))
-                }
-            }, label: {
-                Text("ログイン")
-                    .frame(maxWidth: .infinity)
-            })
-            .frame(maxWidth: .infinity)
-            .buttonStyle(CapsuleButtonStyle(backgroundColor: signUpButtonBackgroundColor, foregroundColor: .PrimaryContrast))
-            .disabled(signUpButtonDisabled)
-            .padding(.top)
+            VStack(alignment: .center) {
+                Button(action: {
+                    if self.validate() {
+                        self.viewStore.send(.auth(.signIn(email: self.email, password: self.password)))
+                    }
+                }, label: {
+                    Text("ログイン")
+                        .frame(maxWidth: .infinity)
+                })
+                .frame(maxWidth: .infinity)
+                .buttonStyle(CapsuleButtonStyle(backgroundColor: signUpButtonBackgroundColor, foregroundColor: .PrimaryContrast))
+                .disabled(signUpButtonDisabled)
+                .padding(.top)
+                ErrorText(errorText: self.viewStore.auth.signInApiStatus.error?.message)
+            }
         }.onAppear {
             // APIステータスをリセットする
-            self.viewStore.send(.resetSignIn)
+            self.viewStore.send(.auth(.resetSignIn))
         }
     }
 }
