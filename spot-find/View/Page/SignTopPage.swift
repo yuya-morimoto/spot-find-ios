@@ -12,10 +12,10 @@ import SwiftUI
 struct SignTopPage: View {
     @State private var signUpSheet = false
 
-    let store: StoreOf<AuthReducer>
+    let store: StoreOf<AppReducer>
 
     var body: some View {
-        WithViewStore(self.store, observe: { $0 }) { viewStore in
+        WithViewStore(self.store) { viewStore in
             VStack {
                 Spacer()
                 Image(Image.AppIntroIcon)
@@ -25,8 +25,8 @@ struct SignTopPage: View {
                     .fontWeight(.semibold)
                 Spacer()
                 VStack {
-                    SignInSheetToggleButton(sheetPage: SignInPage(viewStore: viewStore), viewStore: viewStore)
-                    SignUpSheetToggleButton(sheetPage: SignUpPage(viewStore: viewStore), viewStore: viewStore)
+                    SignInSheetToggleButton(sheetPage: SignInPage(viewStore: viewStore))
+                    SignUpSheetToggleButton(sheetPage: SignUpPage(viewStore: viewStore))
                 }
             }
             .padding()

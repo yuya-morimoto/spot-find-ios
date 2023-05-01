@@ -9,13 +9,12 @@ import ComposableArchitecture
 import SwiftUI
 
 struct AppTopPage: View {
-    let store: StoreOf<AuthReducer>
-    
+    let store: AppStore
 
     var body: some View {
-        WithViewStore(self.store, observe: { $0 }) { viewStore in
+        WithViewStore(self.store, observe: \.auth) { viewStore in
             Button("sign out") {
-                viewStore.send(.signOut)
+                viewStore.send(.auth(.signOut))
             }
         }
     }

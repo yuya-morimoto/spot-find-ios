@@ -15,6 +15,7 @@ struct AuthReducer: ReducerProtocol {
     @Dependency(\.authClient.sendEmailVerification) var sendEmailVerification
     @Dependency(\.authClient.signIn) var signIn
     @Dependency(\.authClient.signOut) var signOut
+    @Dependency(\.timeClient.delay) var delay
 
     func reduce(into state: inout AuthState, action: AuthAction) -> EffectTask<AuthAction> {
         switch action {
@@ -116,6 +117,7 @@ struct AuthReducer: ReducerProtocol {
             }
         case let .onSignOutResponse(.success(result)):
             state.currentUser = nil
+            state.isEmailVerified = false
             state.signOutApiStatus.stepSuccess(result: result)
             return .none
         case let .onSignOutResponse(.failure(error)):

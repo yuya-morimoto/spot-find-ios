@@ -14,7 +14,7 @@ struct SignUpForm: View {
     @State private var password: String = ""
     @State private var validPasswordMessage: String? = nil
 
-    let viewStore: ViewStoreOf<AuthReducer>
+    let viewStore: AppViewStore
 
     var body: some View {
         VStack {
@@ -49,22 +49,24 @@ struct SignUpForm: View {
 
             // MARK: - submit
 
-            ErrorText(errorText: self.viewStore.createaUserApiStatus.error?.message)
-            Button(action: {
-                if self.validate() {
-                    self.viewStore.send(.createUser(email: self.email, password: self.password))
-                }
-            }, label: {
-                Text("アカウントを作成")
-                    .frame(maxWidth: .infinity)
-            })
-            .frame(maxWidth: .infinity)
-            .buttonStyle(CapsuleButtonStyle(backgroundColor: signUpButtonBackgroundColor, foregroundColor: .PrimaryContrast))
-            .disabled(signUpButtonDisabled)
-            .padding(.top)
+            VStack(alignment: .center) {
+                Button(action: {
+                    if self.validate() {
+                        self.viewStore.send(.auth(.createUser(email: self.email, password: self.password)))
+                    }
+                }, label: {
+                    Text("アカウントを作成")
+                        .frame(maxWidth: .infinity)
+                })
+                .frame(maxWidth: .infinity)
+                .buttonStyle(CapsuleButtonStyle(backgroundColor: signUpButtonBackgroundColor, foregroundColor: .PrimaryContrast))
+                .disabled(signUpButtonDisabled)
+                .padding(.top)
+                ErrorText(errorText: self.viewStore.auth.createaUserApiStatus.error?.message)
+            }
         }.onAppear {
             // APIステータスをリセットする
-            self.viewStore.send(.resetCreateUser)
+            self.viewStore.send(.auth(.resetCreateUser))
         }
     }
 }

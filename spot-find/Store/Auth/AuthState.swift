@@ -19,6 +19,7 @@ struct AuthState: Equatable {
     var signOutApiStatus: SignOutApiStatus = .init()
 
     init() {
+        // メールアドレス認証済み情報を設定する
         if let user = Auth.auth().currentUser {
             self.currentUser = user
             self.isEmailVerified = user.isEmailVerified
@@ -29,7 +30,8 @@ struct AuthState: Equatable {
     }
 }
 
-typealias CreateUserApiStatus = ApiStatusState<AuthDataResult>
-typealias SendEmailVerificationApiStatus = ApiStatusState<Bool>
-typealias SignInApiStatus = ApiStatusState<AuthDataResult>
-typealias SignOutApiStatus = ApiStatusState<Bool>
+
+typealias CreateUserApiStatus = StatusState<AuthDataResult>
+typealias SendEmailVerificationApiStatus = StatusState<Bool>
+typealias SignInApiStatus = StatusState<AuthDataResult>
+typealias SignOutApiStatus = StatusState<Bool>

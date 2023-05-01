@@ -11,9 +11,8 @@ import SwiftUI
 struct SignUpPage: View {
     @State var email: String = ""
     @State var password: String = ""
-    @State var isCreated: Bool = false
 
-    let viewStore: ViewStoreOf<AuthReducer>
+    let viewStore: AppViewStore
 
     var body: some View {
         VStack {
