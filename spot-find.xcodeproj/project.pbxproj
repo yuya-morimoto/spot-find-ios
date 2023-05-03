@@ -33,6 +33,12 @@
 		9947CB6629F4F6A100657867 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6529F4F6A100657867 /* SignUpPage.swift */; };
 		9947CB6C29F52F9F00657867 /* StatusAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6B29F52F9F00657867 /* StatusAction.swift */; };
 		9955C7192A025B6600ACCB45 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 9955C7182A025B6600ACCB45 /* Apollo */; };
+		9955C7252A02C81300ACCB45 /* Schema.json.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C71B2A02C81300ACCB45 /* Schema.json.graphql.swift */; };
+		9955C7262A02C81300ACCB45 /* CheckQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C71E2A02C81300ACCB45 /* CheckQuery.graphql.swift */; };
+		9955C7272A02C81300ACCB45 /* Check.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7212A02C81300ACCB45 /* Check.graphql.swift */; };
+		9955C7282A02C81300ACCB45 /* Query.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7222A02C81300ACCB45 /* Query.graphql.swift */; };
+		9955C7292A02C81300ACCB45 /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7232A02C81300ACCB45 /* SchemaConfiguration.swift */; };
+		9955C72A2A02C81300ACCB45 /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7242A02C81300ACCB45 /* SchemaMetadata.graphql.swift */; };
 		99B99E6E29FD0612007CDB0C /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E6D29FD0612007CDB0C /* AuthClient.swift */; };
 		99B99E7529FD19B8007CDB0C /* WaitingEmailVerificationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */; };
 		99B99E7729FD6523007CDB0C /* StorePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7629FD6523007CDB0C /* StorePreview.swift */; };
@@ -98,6 +104,12 @@
 		9945071A29F43AB0003FC0E5 /* StatusState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusState.swift; sourceTree = "<group>"; };
 		9947CB6529F4F6A100657867 /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
 		9947CB6B29F52F9F00657867 /* StatusAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusAction.swift; sourceTree = "<group>"; };
+		9955C71B2A02C81300ACCB45 /* Schema.json.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schema.json.graphql.swift; sourceTree = "<group>"; };
+		9955C71E2A02C81300ACCB45 /* CheckQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckQuery.graphql.swift; sourceTree = "<group>"; };
+		9955C7212A02C81300ACCB45 /* Check.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check.graphql.swift; sourceTree = "<group>"; };
+		9955C7222A02C81300ACCB45 /* Query.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.graphql.swift; sourceTree = "<group>"; };
+		9955C7232A02C81300ACCB45 /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
+		9955C7242A02C81300ACCB45 /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
 		99B99E6D29FD0612007CDB0C /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingEmailVerificationPage.swift; sourceTree = "<group>"; };
 		99B99E7629FD6523007CDB0C /* StorePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePreview.swift; sourceTree = "<group>"; };
@@ -308,9 +320,55 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		9955C71A2A02C81300ACCB45 /* Graphql */ = {
+			isa = PBXGroup;
+			children = (
+				9955C71B2A02C81300ACCB45 /* Schema.json.graphql.swift */,
+				9955C71C2A02C81300ACCB45 /* Operations */,
+				9955C71F2A02C81300ACCB45 /* Schema */,
+			);
+			path = Graphql;
+			sourceTree = "<group>";
+		};
+		9955C71C2A02C81300ACCB45 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				9955C71D2A02C81300ACCB45 /* Queries */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		9955C71D2A02C81300ACCB45 /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				9955C71E2A02C81300ACCB45 /* CheckQuery.graphql.swift */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		9955C71F2A02C81300ACCB45 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				9955C7202A02C81300ACCB45 /* Objects */,
+				9955C7232A02C81300ACCB45 /* SchemaConfiguration.swift */,
+				9955C7242A02C81300ACCB45 /* SchemaMetadata.graphql.swift */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
+		9955C7202A02C81300ACCB45 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				9955C7212A02C81300ACCB45 /* Check.graphql.swift */,
+				9955C7222A02C81300ACCB45 /* Query.graphql.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		99B99E7329FD0F4B007CDB0C /* Dependency */ = {
 			isa = PBXGroup;
 			children = (
+				9955C71A2A02C81300ACCB45 /* Graphql */,
 				99B99E6D29FD0612007CDB0C /* AuthClient.swift */,
 				99B99E9129FE4D38007CDB0C /* TimeClient.swift */,
 			);
@@ -545,19 +603,24 @@
 				99B99E6E29FD0612007CDB0C /* AuthClient.swift in Sources */,
 				9945071429F43507003FC0E5 /* ErrorText.swift in Sources */,
 				99B99E9029FE4C44007CDB0C /* UiReducer.swift in Sources */,
+				9955C7282A02C81300ACCB45 /* Query.graphql.swift in Sources */,
 				99B99EA029FECCFD007CDB0C /* BackgroundPage.swift in Sources */,
 				9945071029F43440003FC0E5 /* ColorExtension.swift in Sources */,
 				990AF47129F3F06600EB6859 /* AuthReducer.swift in Sources */,
 				99B99E9229FE4D38007CDB0C /* TimeClient.swift in Sources */,
 				99B99E8E29FE4C38007CDB0C /* UiAction.swift in Sources */,
 				990AF46E29F3EF8700EB6859 /* AuthAction.swift in Sources */,
+				9955C7292A02C81300ACCB45 /* SchemaConfiguration.swift in Sources */,
+				9955C7272A02C81300ACCB45 /* Check.graphql.swift in Sources */,
 				9945070B29F433FD003FC0E5 /* SignInPage.swift in Sources */,
 				990AF41529F3BA8800EB6859 /* spot_findApp.swift in Sources */,
 				99B99EA429FECDA9007CDB0C /* ProgressSpinnerObserve.swift in Sources */,
 				9947CB6629F4F6A100657867 /* SignUpPage.swift in Sources */,
 				99B99E7E29FD69AE007CDB0C /* SignUpSheetToggleButton.swift in Sources */,
+				9955C7262A02C81300ACCB45 /* CheckQuery.graphql.swift in Sources */,
 				9947CB6C29F52F9F00657867 /* StatusAction.swift in Sources */,
 				99B99E8029FD6CA3007CDB0C /* SignUpForm.swift in Sources */,
+				9955C7252A02C81300ACCB45 /* Schema.json.graphql.swift in Sources */,
 				99B99E9E29FEC899007CDB0C /* EmailVerificationDialogButton.swift in Sources */,
 				990AF46C29F3EE3700EB6859 /* AuthState.swift in Sources */,
 				990AF47729F3F71E00EB6859 /* AppTopPage.swift in Sources */,
@@ -565,6 +628,7 @@
 				99B99E9829FE590C007CDB0C /* AppReducer.swift in Sources */,
 				99B99E8C29FE4B0D007CDB0C /* UiState.swift in Sources */,
 				990AF47529F3F65700EB6859 /* RootView.swift in Sources */,
+				9955C72A2A02C81300ACCB45 /* SchemaMetadata.graphql.swift in Sources */,
 				99B99E7C29FD66DA007CDB0C /* SignInSheetToggleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
