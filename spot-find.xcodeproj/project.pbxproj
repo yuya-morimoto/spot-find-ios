@@ -32,6 +32,7 @@
 		9945071B29F43AB0003FC0E5 /* StatusState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9945071A29F43AB0003FC0E5 /* StatusState.swift */; };
 		9947CB6629F4F6A100657867 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6529F4F6A100657867 /* SignUpPage.swift */; };
 		9947CB6C29F52F9F00657867 /* StatusAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6B29F52F9F00657867 /* StatusAction.swift */; };
+		9955C7192A025B6600ACCB45 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 9955C7182A025B6600ACCB45 /* Apollo */; };
 		99B99E6E29FD0612007CDB0C /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E6D29FD0612007CDB0C /* AuthClient.swift */; };
 		99B99E7529FD19B8007CDB0C /* WaitingEmailVerificationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */; };
 		99B99E7729FD6523007CDB0C /* StorePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7629FD6523007CDB0C /* StorePreview.swift */; };
@@ -124,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				990AF45229F3C75D00EB6859 /* ComposableArchitecture in Frameworks */,
+				9955C7192A025B6600ACCB45 /* Apollo in Frameworks */,
 				990AF44029F3BD6800EB6859 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +386,7 @@
 			packageProductDependencies = (
 				990AF43F29F3BD6800EB6859 /* FirebaseAuth */,
 				990AF45129F3C75D00EB6859 /* ComposableArchitecture */,
+				9955C7182A025B6600ACCB45 /* Apollo */,
 			);
 			productName = "spot-find";
 			productReference = 990AF41129F3BA8800EB6859 /* spot-find.app */;
@@ -460,6 +463,7 @@
 			packageReferences = (
 				990AF43E29F3BD6800EB6859 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				990AF45029F3C75D00EB6859 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				9955C7172A025B6600ACCB45 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 990AF41229F3BA8800EB6859 /* Products */;
 			projectDirPath = "";
@@ -1044,6 +1048,14 @@
 				minimumVersion = 0.9.0;
 			};
 		};
+		9955C7172A025B6600ACCB45 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1056,6 +1068,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 990AF45029F3C75D00EB6859 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		9955C7182A025B6600ACCB45 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9955C7172A025B6600ACCB45 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
