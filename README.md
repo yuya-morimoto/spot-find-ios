@@ -12,6 +12,11 @@ npm install -g apollo
 # Installation
 
 ```
+projectを右クリック
+Install CLIでApollo Cliのシンボリックリンク生成
+```
+
+```
 // localhost:3000よりschemaのダウンロードを行う
 // 切り替える場合はエンドポイントを切り替えて実行する
 make download-schema
