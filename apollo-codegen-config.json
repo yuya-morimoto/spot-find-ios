@@ -1,0 +1,23 @@
+{
+  "schemaNamespace": "./schema.json",
+  "input": {
+    "operationSearchPaths": ["./apollo/graphql/*.graphql"],
+    "schemaSearchPaths": ["./apollo/schema.json"]
+  },
+  "output": {
+    "testMocks": {
+      "none": {}
+    },
+    "schemaTypes": {
+      "path": "./spot-find/Store/Dependency/Graphql",
+      "moduleType": {
+        "embeddedInTarget": {
+          "name": "spot-find"
+        }
+      }
+    },
+    "operations": {
+      "inSchemaModule": {}
+    }
+  }
+}
