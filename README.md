@@ -27,3 +27,8 @@ make download-schema
 // Schema更新時にコマンドを実行して最新状態に置き換える
 make apollo-generate
 ```
+
+```
+// もしフォルダやファイルがXcode上で表示されない場合
+File > Add File to "..."より対象のフォルダまたはファイルを追加する(Copy items if neededにチェック)
+```
