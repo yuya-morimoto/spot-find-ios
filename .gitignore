@@ -92,3 +92,4 @@ iOSInjectionProject/
 # apollo
 apollo/schema.json
 spot-find/Store/Dependency/Graphql/
+apollo-ios-cli

@@ -1,5 +1,5 @@
 {
-  "schemaNamespace": "./schema.json",
+  "schemaNamespace": "GraphQL",
   "input": {
     "operationSearchPaths": ["./apollo/graphql/*.graphql"],
     "_comments": [
