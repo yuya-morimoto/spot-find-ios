@@ -33,12 +33,14 @@
 		9947CB6629F4F6A100657867 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6529F4F6A100657867 /* SignUpPage.swift */; };
 		9947CB6C29F52F9F00657867 /* StatusAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947CB6B29F52F9F00657867 /* StatusAction.swift */; };
 		9955C7192A025B6600ACCB45 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 9955C7182A025B6600ACCB45 /* Apollo */; };
-		9955C7252A02C81300ACCB45 /* Schema.json.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C71B2A02C81300ACCB45 /* Schema.json.graphql.swift */; };
-		9955C7262A02C81300ACCB45 /* CheckQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C71E2A02C81300ACCB45 /* CheckQuery.graphql.swift */; };
-		9955C7272A02C81300ACCB45 /* Check.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7212A02C81300ACCB45 /* Check.graphql.swift */; };
-		9955C7282A02C81300ACCB45 /* Query.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7222A02C81300ACCB45 /* Query.graphql.swift */; };
-		9955C7292A02C81300ACCB45 /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7232A02C81300ACCB45 /* SchemaConfiguration.swift */; };
-		9955C72A2A02C81300ACCB45 /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7242A02C81300ACCB45 /* SchemaMetadata.graphql.swift */; };
+		9955C7582A03950A00ACCB45 /* CheckQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7502A03950A00ACCB45 /* CheckQuery.graphql.swift */; };
+		9955C7592A03950A00ACCB45 /* Check.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7532A03950A00ACCB45 /* Check.graphql.swift */; };
+		9955C75A2A03950A00ACCB45 /* Query.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7542A03950A00ACCB45 /* Query.graphql.swift */; };
+		9955C75B2A03950A00ACCB45 /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7552A03950A00ACCB45 /* SchemaConfiguration.swift */; };
+		9955C75C2A03950A00ACCB45 /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7562A03950A00ACCB45 /* SchemaMetadata.graphql.swift */; };
+		9955C75D2A03950A00ACCB45 /* GraphQL.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7572A03950A00ACCB45 /* GraphQL.graphql.swift */; };
+		9955C75F2A03964500ACCB45 /* ZeusClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C75E2A03964500ACCB45 /* ZeusClient.swift */; };
+		9955C7622A039B2400ACCB45 /* EnvVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955C7612A039B2400ACCB45 /* EnvVariables.swift */; };
 		99B99E6E29FD0612007CDB0C /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E6D29FD0612007CDB0C /* AuthClient.swift */; };
 		99B99E7529FD19B8007CDB0C /* WaitingEmailVerificationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */; };
 		99B99E7729FD6523007CDB0C /* StorePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B99E7629FD6523007CDB0C /* StorePreview.swift */; };
@@ -104,12 +106,15 @@
 		9945071A29F43AB0003FC0E5 /* StatusState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusState.swift; sourceTree = "<group>"; };
 		9947CB6529F4F6A100657867 /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
 		9947CB6B29F52F9F00657867 /* StatusAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusAction.swift; sourceTree = "<group>"; };
-		9955C71B2A02C81300ACCB45 /* Schema.json.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schema.json.graphql.swift; sourceTree = "<group>"; };
-		9955C71E2A02C81300ACCB45 /* CheckQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckQuery.graphql.swift; sourceTree = "<group>"; };
-		9955C7212A02C81300ACCB45 /* Check.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check.graphql.swift; sourceTree = "<group>"; };
-		9955C7222A02C81300ACCB45 /* Query.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.graphql.swift; sourceTree = "<group>"; };
-		9955C7232A02C81300ACCB45 /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
-		9955C7242A02C81300ACCB45 /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
+		9955C7502A03950A00ACCB45 /* CheckQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckQuery.graphql.swift; sourceTree = "<group>"; };
+		9955C7532A03950A00ACCB45 /* Check.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check.graphql.swift; sourceTree = "<group>"; };
+		9955C7542A03950A00ACCB45 /* Query.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.graphql.swift; sourceTree = "<group>"; };
+		9955C7552A03950A00ACCB45 /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
+		9955C7562A03950A00ACCB45 /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
+		9955C7572A03950A00ACCB45 /* GraphQL.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphQL.graphql.swift; sourceTree = "<group>"; };
+		9955C75E2A03964500ACCB45 /* ZeusClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeusClient.swift; sourceTree = "<group>"; };
+		9955C7602A03990000ACCB45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9955C7612A039B2400ACCB45 /* EnvVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvVariables.swift; sourceTree = "<group>"; };
 		99B99E6D29FD0612007CDB0C /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		99B99E7429FD19B8007CDB0C /* WaitingEmailVerificationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingEmailVerificationPage.swift; sourceTree = "<group>"; };
 		99B99E7629FD6523007CDB0C /* StorePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePreview.swift; sourceTree = "<group>"; };
@@ -182,6 +187,7 @@
 		990AF41329F3BA8800EB6859 /* spot-find */ = {
 			isa = PBXGroup;
 			children = (
+				9955C7602A03990000ACCB45 /* Info.plist */,
 				990AF44129F3BD9F00EB6859 /* Application */,
 				990AF45329F3C91E00EB6859 /* Store */,
 				990AF45C29F3D71B00EB6859 /* View */,
@@ -320,47 +326,47 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		9955C71A2A02C81300ACCB45 /* Graphql */ = {
+		9955C74D2A03950A00ACCB45 /* Graphql */ = {
 			isa = PBXGroup;
 			children = (
-				9955C71B2A02C81300ACCB45 /* Schema.json.graphql.swift */,
-				9955C71C2A02C81300ACCB45 /* Operations */,
-				9955C71F2A02C81300ACCB45 /* Schema */,
+				9955C74E2A03950A00ACCB45 /* Operations */,
+				9955C7512A03950A00ACCB45 /* Schema */,
+				9955C7572A03950A00ACCB45 /* GraphQL.graphql.swift */,
 			);
 			path = Graphql;
 			sourceTree = "<group>";
 		};
-		9955C71C2A02C81300ACCB45 /* Operations */ = {
+		9955C74E2A03950A00ACCB45 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				9955C71D2A02C81300ACCB45 /* Queries */,
+				9955C74F2A03950A00ACCB45 /* Queries */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
 		};
-		9955C71D2A02C81300ACCB45 /* Queries */ = {
+		9955C74F2A03950A00ACCB45 /* Queries */ = {
 			isa = PBXGroup;
 			children = (
-				9955C71E2A02C81300ACCB45 /* CheckQuery.graphql.swift */,
+				9955C7502A03950A00ACCB45 /* CheckQuery.graphql.swift */,
 			);
 			path = Queries;
 			sourceTree = "<group>";
 		};
-		9955C71F2A02C81300ACCB45 /* Schema */ = {
+		9955C7512A03950A00ACCB45 /* Schema */ = {
 			isa = PBXGroup;
 			children = (
-				9955C7202A02C81300ACCB45 /* Objects */,
-				9955C7232A02C81300ACCB45 /* SchemaConfiguration.swift */,
-				9955C7242A02C81300ACCB45 /* SchemaMetadata.graphql.swift */,
+				9955C7522A03950A00ACCB45 /* Objects */,
+				9955C7552A03950A00ACCB45 /* SchemaConfiguration.swift */,
+				9955C7562A03950A00ACCB45 /* SchemaMetadata.graphql.swift */,
 			);
 			path = Schema;
 			sourceTree = "<group>";
 		};
-		9955C7202A02C81300ACCB45 /* Objects */ = {
+		9955C7522A03950A00ACCB45 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				9955C7212A02C81300ACCB45 /* Check.graphql.swift */,
-				9955C7222A02C81300ACCB45 /* Query.graphql.swift */,
+				9955C7532A03950A00ACCB45 /* Check.graphql.swift */,
+				9955C7542A03950A00ACCB45 /* Query.graphql.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -368,9 +374,10 @@
 		99B99E7329FD0F4B007CDB0C /* Dependency */ = {
 			isa = PBXGroup;
 			children = (
-				9955C71A2A02C81300ACCB45 /* Graphql */,
+				9955C74D2A03950A00ACCB45 /* Graphql */,
 				99B99E6D29FD0612007CDB0C /* AuthClient.swift */,
 				99B99E9129FE4D38007CDB0C /* TimeClient.swift */,
+				9955C75E2A03964500ACCB45 /* ZeusClient.swift */,
 			);
 			path = Dependency;
 			sourceTree = "<group>";
@@ -420,6 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				9945071629F43541003FC0E5 /* ErrorState.swift */,
+				9955C7612A039B2400ACCB45 /* EnvVariables.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -592,43 +600,45 @@
 			files = (
 				9945071B29F43AB0003FC0E5 /* StatusState.swift in Sources */,
 				9945071729F43541003FC0E5 /* ErrorState.swift in Sources */,
+				9955C7582A03950A00ACCB45 /* CheckQuery.graphql.swift in Sources */,
 				99B99E8829FE303A007CDB0C /* EmphasisText.swift in Sources */,
 				990AF45B29F3CF4800EB6859 /* SignTopPage.swift in Sources */,
 				99B99E8629FE27F5007CDB0C /* SignInForm.swift in Sources */,
 				99B99EA229FECD42007CDB0C /* ProgressSpinner.swift in Sources */,
+				9955C75C2A03950A00ACCB45 /* SchemaMetadata.graphql.swift in Sources */,
 				99B99E7729FD6523007CDB0C /* StorePreview.swift in Sources */,
+				9955C75A2A03950A00ACCB45 /* Query.graphql.swift in Sources */,
+				9955C75F2A03964500ACCB45 /* ZeusClient.swift in Sources */,
 				9945071229F434A8003FC0E5 /* ImageExtension.swift in Sources */,
 				99B99E7A29FD65E4007CDB0C /* CapsuleButtonStyle.swift in Sources */,
 				99B99E7529FD19B8007CDB0C /* WaitingEmailVerificationPage.swift in Sources */,
 				99B99E6E29FD0612007CDB0C /* AuthClient.swift in Sources */,
 				9945071429F43507003FC0E5 /* ErrorText.swift in Sources */,
 				99B99E9029FE4C44007CDB0C /* UiReducer.swift in Sources */,
-				9955C7282A02C81300ACCB45 /* Query.graphql.swift in Sources */,
 				99B99EA029FECCFD007CDB0C /* BackgroundPage.swift in Sources */,
 				9945071029F43440003FC0E5 /* ColorExtension.swift in Sources */,
 				990AF47129F3F06600EB6859 /* AuthReducer.swift in Sources */,
+				9955C7592A03950A00ACCB45 /* Check.graphql.swift in Sources */,
+				9955C75D2A03950A00ACCB45 /* GraphQL.graphql.swift in Sources */,
 				99B99E9229FE4D38007CDB0C /* TimeClient.swift in Sources */,
 				99B99E8E29FE4C38007CDB0C /* UiAction.swift in Sources */,
 				990AF46E29F3EF8700EB6859 /* AuthAction.swift in Sources */,
-				9955C7292A02C81300ACCB45 /* SchemaConfiguration.swift in Sources */,
-				9955C7272A02C81300ACCB45 /* Check.graphql.swift in Sources */,
 				9945070B29F433FD003FC0E5 /* SignInPage.swift in Sources */,
 				990AF41529F3BA8800EB6859 /* spot_findApp.swift in Sources */,
 				99B99EA429FECDA9007CDB0C /* ProgressSpinnerObserve.swift in Sources */,
 				9947CB6629F4F6A100657867 /* SignUpPage.swift in Sources */,
+				9955C7622A039B2400ACCB45 /* EnvVariables.swift in Sources */,
 				99B99E7E29FD69AE007CDB0C /* SignUpSheetToggleButton.swift in Sources */,
-				9955C7262A02C81300ACCB45 /* CheckQuery.graphql.swift in Sources */,
 				9947CB6C29F52F9F00657867 /* StatusAction.swift in Sources */,
 				99B99E8029FD6CA3007CDB0C /* SignUpForm.swift in Sources */,
-				9955C7252A02C81300ACCB45 /* Schema.json.graphql.swift in Sources */,
 				99B99E9E29FEC899007CDB0C /* EmailVerificationDialogButton.swift in Sources */,
 				990AF46C29F3EE3700EB6859 /* AuthState.swift in Sources */,
 				990AF47729F3F71E00EB6859 /* AppTopPage.swift in Sources */,
 				99B99E8429FD76BF007CDB0C /* StringExtension.swift in Sources */,
 				99B99E9829FE590C007CDB0C /* AppReducer.swift in Sources */,
 				99B99E8C29FE4B0D007CDB0C /* UiState.swift in Sources */,
+				9955C75B2A03950A00ACCB45 /* SchemaConfiguration.swift in Sources */,
 				990AF47529F3F65700EB6859 /* RootView.swift in Sources */,
-				9955C72A2A02C81300ACCB45 /* SchemaMetadata.graphql.swift in Sources */,
 				99B99E7C29FD66DA007CDB0C /* SignInSheetToggleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -795,7 +805,8 @@
 				DEVELOPMENT_TEAM = N97Y4ACV2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(BUNDLE_DISPLAY_NAME)";
+				INFOPLIST_FILE = "spot-find/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "[DEV]";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -811,6 +822,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				ZEUS_ENDPOINT = "http://localhost:3000/graphql";
 			};
 			name = Debug;
 		};
@@ -825,7 +837,8 @@
 				DEVELOPMENT_TEAM = N97Y4ACV2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(BUNDLE_DISPLAY_NAME)";
+				INFOPLIST_FILE = "spot-find/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "[DEV]";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -841,6 +854,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				ZEUS_ENDPOINT = "http://localhost:3000/graphql";
 			};
 			name = Release;
 		};
@@ -993,7 +1007,8 @@
 				DEVELOPMENT_TEAM = N97Y4ACV2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(BUNDLE_DISPLAY_NAME)";
+				INFOPLIST_FILE = "spot-find/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "[DEV]";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1009,6 +1024,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				ZEUS_ENDPOINT = "http://localhost:3000/graphql";
 			};
 			name = Staging;
 		};

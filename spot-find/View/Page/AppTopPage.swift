@@ -10,6 +10,8 @@ import MapKit
 import SwiftUI
 
 struct AppTopPage: View {
+    @Dependency(\.zeusClient) var zeusClient
+    
     let store: AppStore
 
     @State private var region = MKCoordinateRegion(
@@ -29,6 +31,13 @@ struct AppTopPage: View {
                     Spacer()
                     Button("ログアウトする") {
                         viewStore.send(.auth(.signOut))
+                    }.buttonStyle(CapsuleButtonStyle(backgroundColor: .Primary, foregroundColor: .PrimaryContrast))
+                    Button(EnvVariables.zeusEndpoint) {
+                        zeusClient.fetch(query: GraphQL.CheckQuery()) { result in
+                          guard let data = try? result.get().data else { return }
+                            print(data.check.id)
+                            print(data.check.message)
+                        }
                     }.buttonStyle(CapsuleButtonStyle(backgroundColor: .Primary, foregroundColor: .PrimaryContrast))
                 }.padding()
             }
